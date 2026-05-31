@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Python **3.11+** (for running the `norm` CLI and Python generation)
+- Python **3.12+** (for running the `norm` CLI and Python generation)
 - A database driver for the engine used by generated code, such as `psycopg` for Postgres
 
 ## Install the CLI

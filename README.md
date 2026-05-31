@@ -88,7 +88,7 @@ await repo.search_authors(rating=4, id=7)
 
 ## Install
 
-The CLI is a Python package today (requires **3.11+**). Install **`norm-cli`** from PyPI; the command on your PATH is **`norm`**:
+The CLI is a Python package today (requires **3.12+**). Install **`norm-cli`** from PyPI; the command on your PATH is **`norm`**:
 
 ```sh
 pipx install norm-cli

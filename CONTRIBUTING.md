@@ -9,7 +9,7 @@ Thanks for your interest in nORM. This document covers local development and doc
 
 ## Development setup
 
-Requires Python **3.11+**.
+Requires Python **3.12+**.
 
 ```sh
 git clone https://github.com/devfros/norm.git
