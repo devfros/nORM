@@ -6,6 +6,7 @@ import {
 } from 'vitepress-plugin-group-icons'
 
 export default defineConfig({
+  base: "/nORM/",
   title: "nORM",
   description: "nORM documentation and SQL feature references.",
 
