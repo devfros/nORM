@@ -1,0 +1,16 @@
+{
+  "queries": {
+    "LowerSwitchedOrder": {
+      "parameters": {
+        "bar": {
+          "datatype": "TEXT",
+          "nullable": false
+        },
+        "bat": {
+          "datatype": "TEXT",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

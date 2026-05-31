@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "ListAuthors": {
+      "properties": [
+        {
+          "name": "n",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

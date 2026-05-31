@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "CTECount": {
+      "properties": [
+        {
+          "name": "count",
+          "datatype": "BIGINT",
+          "non_column": true
+        },
+        {
+          "name": "count",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

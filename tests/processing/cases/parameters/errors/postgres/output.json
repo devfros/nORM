@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "derived_missing_alias": {
+      "error": {
+        "code": "TYPE_INFERENCE_FAILED"
+      }
+    },
+    "unknown_alias": {
+      "error": {
+        "code": "TYPE_INFERENCE_FAILED"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "DeleteReadyWithCTE": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "bar",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

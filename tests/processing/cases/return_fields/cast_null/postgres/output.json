@@ -1,0 +1,32 @@
+{
+  "queries": {
+    "ListNullable": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "b",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "c",
+          "datatype": "BIGINT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "d",
+          "datatype": "TIME",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "queries": {
+    "delete_using_returning": {
+      "properties": [
+        {
+          "name": "deleted_author_id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "related_title",
+          "datatype": "TEXT",
+          "table": "books"
+        }
+      ]
+    },
+    "delete_using_returning_wildcard": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors"
+        },
+        {
+          "name": "rating",
+          "datatype": "INT",
+          "table": "authors"
+        }
+      ]
+    }
+  }
+}

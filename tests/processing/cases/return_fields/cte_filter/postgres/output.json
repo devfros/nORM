@@ -1,0 +1,13 @@
+{
+  "queries": {
+    "CTEFilter": {
+      "properties": [
+        {
+          "name": "count",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "queries": {
+    "UpdateUserAddressWithAddress": {
+      "properties": [
+        {
+          "name": "user_id",
+          "datatype": "BIGINT",
+          "table": "user_address"
+        },
+        {
+          "name": "address_id",
+          "datatype": "BIGINT",
+          "table": "user_address"
+        },
+        {
+          "name": "default_address",
+          "datatype": "BIGINT",
+          "table": "user_address"
+        },
+        {
+          "name": "address_line",
+          "datatype": "VARCHAR",
+          "table": "address"
+        },
+        {
+          "name": "region",
+          "datatype": "VARCHAR",
+          "table": "address"
+        },
+        {
+          "name": "city",
+          "datatype": "VARCHAR",
+          "table": "address"
+        }
+      ]
+    }
+  }
+}

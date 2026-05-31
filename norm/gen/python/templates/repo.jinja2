@@ -1,0 +1,24 @@
+{% block body %}
+{% if param_schemas %}
+# Query param schemas
+{% for param_schema in param_schemas %}
+{{ param_schema }}
+
+{% endfor %}
+{% endif %}
+{% if query_row_schemas %}
+# Query row schemas
+{% for query_row_schema in query_row_schemas %}
+{{ query_row_schema }}
+
+{% endfor %}
+{% endif %}
+class {{ name }}:
+    def __init__(self, {{ vars.db }}: Connection) -> None:
+        self.{{ vars.db }} = {{ vars.db }}
+    {# Query functions #}
+    {% for function in functions %}
+
+    {{ function | indent(4) }}
+    {% endfor -%}
+{%- endblock -%}

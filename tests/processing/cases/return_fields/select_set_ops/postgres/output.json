@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "except_basic": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL"
+        }
+      ]
+    },
+    "intersect_basic": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL"
+        }
+      ]
+    },
+    "parenthesized_union_wrapper": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL"
+        }
+      ]
+    },
+    "union_alias": {
+      "properties": [
+        {
+          "name": "entity_id",
+          "datatype": "SERIAL"
+        }
+      ]
+    },
+    "union_all_text": {
+      "properties": [
+        {
+          "name": "value",
+          "datatype": "TEXT"
+        }
+      ]
+    },
+    "union_cast_text": {
+      "properties": [
+        {
+          "name": "value",
+          "datatype": "TEXT"
+        }
+      ]
+    }
+  }
+}

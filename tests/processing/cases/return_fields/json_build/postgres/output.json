@@ -1,0 +1,128 @@
+{
+  "queries": {
+    "SelectJSONBuildObject": {
+      "properties": [
+        {
+          "name": "json_build_object",
+          "datatype": "JSONOBJECT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "json_build_object",
+          "datatype": "JSONOBJECT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "json_build_object",
+          "datatype": "JSONOBJECT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "json_build_object",
+          "datatype": "JSONOBJECT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "SelectJSONBuildArray": {
+      "properties": [
+        {
+          "name": "json_build_array",
+          "datatype": "JSONARRAY",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "json_build_array",
+          "datatype": "JSONARRAY",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "json_build_array",
+          "datatype": "JSONARRAY",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "json_build_array",
+          "datatype": "JSONARRAY",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "json_build_array",
+          "datatype": "JSONARRAY",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "SelectJSONBBuildObject": {
+      "properties": [
+        {
+          "name": "jsonb_build_object",
+          "datatype": "JSONOBJECT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "jsonb_build_object",
+          "datatype": "JSONOBJECT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "jsonb_build_object",
+          "datatype": "JSONOBJECT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "jsonb_build_object",
+          "datatype": "JSONOBJECT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "SelectJSONBBuildArray": {
+      "properties": [
+        {
+          "name": "jsonb_build_array",
+          "datatype": "JSONARRAY",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "jsonb_build_array",
+          "datatype": "JSONARRAY",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "jsonb_build_array",
+          "datatype": "JSONARRAY",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "jsonb_build_array",
+          "datatype": "JSONARRAY",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "jsonb_build_array",
+          "datatype": "JSONARRAY",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

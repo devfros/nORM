@@ -1,0 +1,32 @@
+{
+  "queries": {
+    "GetAuthorsWithBooksCount": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "authors",
+          "non_column": false
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors",
+          "non_column": false
+        },
+        {
+          "name": "bio",
+          "datatype": "TEXT",
+          "table": "authors",
+          "non_column": false
+        },
+        {
+          "name": "books_count",
+          "datatype": "BIGINT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

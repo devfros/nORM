@@ -1,0 +1,10 @@
+{
+  "queries": {
+    "current_date": {
+      "parameters": {}
+    },
+    "current_timestamp": {
+      "parameters": {}
+    }
+  }
+}

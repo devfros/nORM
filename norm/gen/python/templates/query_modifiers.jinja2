@@ -1,0 +1,130 @@
+{% macro render_params_positional(context, vars) %}
+{% if context.sql_query_params %}
+{{ vars.params }} = [
+    {% for param in context.sql_query_params %}
+    {% if param.kind == 'patch_flag' %}
+    {{ context.sentinel}}.to_bool({{ param.expr }}),
+    {% elif param.kind == 'patch_target' %}
+    {{ context.sentinel}}.to_none({{ param.expr }}),
+    {% elif param.kind == 'list' %}
+    *{{ param.expr }},
+    {% else %}
+    {{ param.expr }},
+    {% endif %}
+    {% endfor %}
+]
+{% elif context.has_query_params %}
+{{ vars.params }} = []
+{% endif %}
+{% endmacro %}
+
+{% macro render_params_named(context, vars) %}
+{% set scalar_params = context.sql_query_params | rejectattr('kind', 'equalto', 'list') | list %}
+{% if scalar_params %}
+{{ vars.params }} = {
+    {% for param in scalar_params %}
+    {% if param.kind == 'patch_flag' %}
+    "{{ param.name }}": {{ context.sentinel}}.to_bool({{ param.expr }}),
+    {% elif param.kind == 'patch_target' %}
+    "{{ param.name }}": {{ context.sentinel}}.to_none({{ param.expr }}),
+    {% else %}
+    "{{ param.name }}": {{ param.expr }},
+    {% endif %}
+    {% endfor %}
+}
+{% elif context.has_query_params %}
+{{ vars.params }} = {}
+{% endif %}
+{% endmacro %}
+
+{% macro render_params(context, vars) -%}
+{%- if context.named_params -%}
+{{- render_params_named(context, vars) -}}
+{%- else -%}
+{{- render_params_positional(context, vars) -}}
+{%- endif -%}
+{%- endmacro %}
+
+{% macro render_dynamic_filter(context, vars) %}
+{% if context.filter_map %}
+# DYNAMIC FILTER
+{{ vars.query }} = build_filter_clauses(
+    {{ vars.query }},
+    {
+    {% for param in context.optional_params %}
+      "{{param.name}}": {{ param.expr }},
+    {% endfor %}
+    },
+    {
+    {% for key, tree in context.filter_map.items() %}
+      "/*{{key}}*/": {{ tree }},
+    {% endfor %}
+    }
+)
+{% endif %}
+{% endmacro %}
+
+
+{% macro render_lists_positional(context, vars) %}
+{% if context.list_modifiers %}
+# LISTS
+{% for modifier in context.list_modifiers %}
+{{ vars.query }} = {{ vars.query }}.replace(
+    "/*{{ modifier.key }}*/", ", ".join("{{ context.param_template }}" for _ in {{ modifier.expr }})
+)
+{% endfor %}
+{% endif %}
+{% endmacro %}
+
+{% macro render_lists_named(context, vars) %}
+{% if context.list_modifiers %}
+# LISTS
+{% for modifier in context.list_modifiers %}
+list_params = {
+    "{{ modifier.key }}_{}".format(i): item for i, item in enumerate({{ modifier.expr }})
+}
+{{ vars.query }} = {{ vars.query }}.replace(
+    "/*{{ modifier.key }}*/", ", ".join("{{ context.param_template }}".format(k) for k in list_params.keys())
+)
+{{ vars.params }}.update(list_params)
+{% endfor %}
+{% endif %}
+{% endmacro %}
+
+{% macro render_lists(context, vars) -%}
+{%- if context.named_params -%}
+{{- render_lists_named(context, vars) -}}
+{%- else -%}
+{{- render_lists_positional(context, vars) -}}
+{%- endif -%}
+{%- endmacro %}
+
+
+{% macro render_orderbys(context, vars) %}
+{% if context.orderby_modifiers %}
+# ORDER BY
+{% for modifier in context.orderby_modifiers %}
+if {{ modifier.order_by_expr }} not in {{ modifier.columns }}:
+    raise ValueError("Invalid column name '{}'".format({{ modifier.order_by_expr }}))
+
+{{ vars.query }} = {{ vars.query }}.replace("/*{{modifier.key}}*/", "{} {}".format({{ modifier.order_by_expr }}, 'DESC' if {{ modifier.desc_expr }} else 'ASC'))
+
+{% endfor %}
+{% endif %}
+{% endmacro %}
+
+
+{% macro render_sentinel_cleanup(context, vars) %}
+{% if context.clear_sentinels and context.has_query_params %}
+# Clear sentinel values
+{% if context.named_params %}
+{{ vars.params }} = {
+    k: v for k, v in {{ vars.params }}.items() if v is not {{ context.sentinel }}
+}
+{% else %}
+{{ vars.params }} = [
+    p for p in {{ vars.params }} if p is not {{ context.sentinel }}
+]
+{% endif %}
+{% endif %}
+{% endmacro %}

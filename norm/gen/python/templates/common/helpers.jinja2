@@ -1,0 +1,127 @@
+{% macro comma_joined(parts) %}
+  {{- parts | join(', ') -}}
+{% endmacro %}
+
+
+{% macro import_line(module, names) -%}
+  {%- if names|length == 0 -%}
+    import {{ module }}
+  {%- elif names|length == 1 -%}
+    from {{ module }} import {{ names[0] }}
+  {%- else -%}
+    from {{ module }} import {{ names|sort|join(', ') }}
+  {%- endif -%}
+{%- endmacro %}
+
+
+{% macro type_annotation(type, nullable) %}
+  {{- type }}{% if nullable and type != 'None' %} | None{% endif %}
+{% endmacro %}
+
+{% macro assign(name, value, space_around=True, type=None) %}
+    {{- name }}
+    {%- if type %} {{- ":" }} {{ type }}{% endif -%}
+    {%- if space_around %}{{ " = " }}{% else %}{{ "=" }}{% endif %}
+    {{- value -}}
+{% endmacro %}
+
+
+{% macro literal(value, quoted=False) %}
+    {% if quoted is defined and quoted == True %}
+    {% set prepared_value = '"' ~ value ~ '"' %}
+    {% endif %}
+    {{- prepared_value if prepared_value is defined else value -}}
+{% endmacro %}
+
+
+{% macro kwarg(item) %}
+    {% set prepared_value = literal(item.value, item.quoted) %}
+    {{- assign(item.name, prepared_value, False) -}}
+{% endmacro %}
+
+
+{% macro call(name, args, kwargs=None, async=False) %}
+  {%- set all_args = [] -%}
+  {%- if args -%}
+    {%- set _ = all_args.extend(args) -%}
+  {%- endif -%}
+  {%- if kwargs -%}
+    {%- for kwarg_item in kwargs -%}
+      {%- set _ = all_args.append(kwarg(kwarg_item) | trim) -%}
+    {%- endfor -%}
+  {%- endif -%}
+  {% if async %}await {% endif %}{{- name }}({{ comma_joined(all_args) -}})
+{%- endmacro %}
+
+
+{% macro attribute(object, attr) %}
+  {{- object }}.{{ attr -}}
+{%- endmacro %}
+
+
+{% macro def(name, asyncronous) %}
+  {% if asyncronous %}async {% endif %}def {{ name }}
+{%- endmacro %}
+
+
+{% macro model_field(field) %}
+    {% set type = type_annotation(field.type, field.nullable) %}
+    {% set default = literal(
+        field.default.value,
+        field.default.quoted
+      ) if field.default else ''
+    %}
+    {% if field.default %}
+    {{ assign(field.name, default, True, type) }}{% if field.comment %}  # {{ field.comment }}{% endif %}
+    {% else %}
+    {{field.name}}: {{type}}{% if field.comment %}  # {{ field.comment }}{% endif %}
+    {% endif %}
+{% endmacro %}
+
+
+{% macro func_param(param) %}
+    {% set type = type_annotation(param.type, param.nullable) %}
+    {# if has default #}
+    {% if param.default %}
+    {% set default = literal(param.default.value, param.default.quoted) %}
+    {% endif %}
+    {# if default #}
+    {% if default %}
+    {{- assign(param.name, default, True, type) -}}
+    {% else %}
+    {# result #}
+    {{- param.name }}
+    {%- if type %} {{- ":" }} {{ type }}{% endif -%}
+    {% endif %}
+{% endmacro %}
+
+
+{% macro func_type_annotation(return_type, one, many) %}
+    {% set type_annotation = type_annotation(return_type, one) if return_type else 'None' %}
+    {% if many %}list[{{ type_annotation }}]{% else %}{{ type_annotation }}{% endif %}
+{% endmacro %}
+
+
+{% macro return(value) %}
+  return {{ value }}
+{% endmacro %}
+
+
+{% macro map_result_to_schema(map_target, output_map) %}
+{{  output_map.schema  }}(
+    {% for key, item in output_map.map.items() %}
+    {% if item is string %}
+    {{item}}={{ map_target }}[{{ key }}],
+    {% else %}
+    {{key}}={{  item.schema  }}(
+        {% for index, item in item.map.items() if item is string %}
+        {{item}}={{ map_target }}[{{ index }}],
+        {% endfor %}
+    {% set keys = item.map.keys() %}
+    {% set start_ind = keys | first %}
+    {% set end_ind = keys | last %}
+    ){% if item.nullable %} if not all(v is None for v in {{ map_target }}[{{start_ind}}:{{ end_ind + 1}}]) else None{% endif +%},
+    {% endif %}
+    {% endfor %}
+)
+{% endmacro %}

@@ -1,0 +1,53 @@
+{
+  "queries": {
+    "abs": {
+      "parameters": {
+        "num": {
+          "datatype": "DECIMAL"
+        }
+      }
+    },
+    "ceil": {
+      "parameters": {
+        "num": {
+          "datatype": "DECIMAL"
+        }
+      }
+    },
+    "floor": {
+      "parameters": {
+        "num": {
+          "datatype": "DECIMAL"
+        }
+      }
+    },
+    "mod": {
+      "parameters": {
+        "num": {
+          "datatype": "INT"
+        }
+      }
+    },
+    "power": {
+      "parameters": {
+        "base": {
+          "datatype": "DECIMAL"
+        }
+      }
+    },
+    "round": {
+      "parameters": {
+        "num": {
+          "datatype": "DECIMAL"
+        }
+      }
+    },
+    "sqrt": {
+      "parameters": {
+        "num": {
+          "datatype": "DECIMAL"
+        }
+      }
+    }
+  }
+}

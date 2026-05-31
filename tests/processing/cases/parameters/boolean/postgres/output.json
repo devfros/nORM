@@ -1,0 +1,45 @@
+{
+  "queries": {
+    "and_guard": {
+      "parameters": {
+        "right_guard": {
+          "datatype": "BOOLEAN"
+        },
+        "left_guard": {
+          "datatype": "BOOLEAN"
+        }
+      }
+    },
+    "cast": {
+      "parameters": {
+        "guard": {
+          "datatype": "BOOLEAN"
+        }
+      }
+    },
+    "not_guard": {
+      "parameters": {
+        "not_guard": {
+          "datatype": "BOOLEAN"
+        }
+      }
+    },
+    "or_guard": {
+      "parameters": {
+        "right_guard": {
+          "datatype": "BOOLEAN"
+        },
+        "left_guard": {
+          "datatype": "BOOLEAN"
+        }
+      }
+    },
+    "predicate": {
+      "parameters": {
+        "guard": {
+          "datatype": "BOOLEAN"
+        }
+      }
+    }
+  }
+}

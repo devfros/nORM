@@ -1,0 +1,87 @@
+{
+  "queries": {
+    "SelectUnion": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        }
+      ]
+    },
+    "SelectUnionWithLimit": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        }
+      ]
+    },
+    "SelectExcept": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        }
+      ]
+    },
+    "SelectIntersect": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        }
+      ]
+    },
+    "SelectUnionOther": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        }
+      ]
+    },
+    "SelectUnionAliased": {
+      "properties": []
+    }
+  }
+}

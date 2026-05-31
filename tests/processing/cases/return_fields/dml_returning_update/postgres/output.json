@@ -1,0 +1,29 @@
+{
+  "queries": {
+    "basic": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "rating",
+          "datatype": "INT",
+          "table": "authors"
+        }
+      ]
+    },
+    "expression_without_alias": {
+      "properties": [
+        {
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "no_returning": {
+      "properties": []
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "GetData": {
+      "properties": [
+        {
+          "name": "key",
+          "datatype": "TEXT",
+          "non_column": true
+        },
+        {
+          "name": "value",
+          "datatype": "JSONB",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

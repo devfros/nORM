@@ -1,0 +1,28 @@
+{
+  "queries": {
+    "like": {
+      "parameters": {
+        "pattern": {
+          "datatype": "TEXT"
+        }
+      }
+    },
+    "ilike": {
+      "parameters": {
+        "pattern": {
+          "datatype": "TEXT"
+        }
+      }
+    },
+    "concat": {
+      "parameters": {
+        "first": {
+          "datatype": "TEXT"
+        },
+        "last": {
+          "datatype": "TEXT"
+        }
+      }
+    }
+  }
+}

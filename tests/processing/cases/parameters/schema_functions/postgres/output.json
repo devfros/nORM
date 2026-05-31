@@ -1,0 +1,50 @@
+{
+  "queries": {
+    "CallAdd": {
+      "parameters": {
+        "a": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        },
+        "b": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        }
+      }
+    },
+    "CallFooText": {
+      "parameters": {
+        "bar": {
+          "datatype": "TEXT",
+          "nullable": false,
+          "optional": false
+        }
+      }
+    },
+    "CallFooInt": {
+      "parameters": {
+        "bar": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        }
+      }
+    },
+    "CallFooAmbiguous": {
+      "error": {
+        "code": "TYPE_INFERENCE_FAILED"
+      }
+    },
+    "ListReturnsTable": {
+      "parameters": {
+        "x": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        }
+      }
+    }
+  }
+}

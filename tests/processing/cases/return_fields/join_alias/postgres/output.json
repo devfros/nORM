@@ -1,0 +1,42 @@
+{
+  "queries": {
+    "AliasJoin": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "title",
+          "datatype": "TEXT",
+          "table": "bar",
+          "non_column": false
+        }
+      ]
+    },
+    "AliasExpand": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "bar",
+          "non_column": false
+        },
+        {
+          "name": "title",
+          "datatype": "TEXT",
+          "table": "bar",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

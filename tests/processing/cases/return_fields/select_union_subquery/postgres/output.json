@@ -1,0 +1,26 @@
+{
+  "queries": {
+    "TestSubqueryUnion": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "bio",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "queries": {
+    "literal_int": {
+      "properties": [
+        {
+          "name": "answer",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "literal_string": {
+      "properties": [
+        {
+          "name": "greeting",
+          "datatype": "VARCHAR",
+          "non_column": true
+        }
+      ]
+    },
+    "literal_scientific": {
+      "properties": [
+        {
+          "name": "metric",
+          "datatype": "DOUBLE",
+          "non_column": true
+        }
+      ]
+    },
+    "null_literal": {
+      "properties": [
+        {
+          "name": "missing_value",
+          "datatype": "NULL",
+          "non_column": true
+        }
+      ]
+    },
+    "boolean_literal": {
+      "properties": [
+        {
+          "name": "is_active",
+          "datatype": "BOOLEAN",
+          "non_column": true
+        }
+      ]
+    },
+    "typed_null_cast": {
+      "properties": [
+        {
+          "name": "maybe_rating",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "queries": {
+    "main": {
+      "parameters": {
+        "author_id": {
+          "datatype": "SERIAL"
+        }
+      }
+    }
+  }
+}

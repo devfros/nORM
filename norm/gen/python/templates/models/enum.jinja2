@@ -1,0 +1,10 @@
+class {{ name }}(StrEnum):
+    {% if comment %}
+    """
+    {{ comment }}
+    """
+
+    {% endif %}
+    {% for value in values %}
+    {{ value.name }} = {{ value.literal }}
+    {% endfor %}

@@ -1,0 +1,50 @@
+{
+  "queries": {
+    "group_by_aggregate": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "book_count",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    },
+    "having_aggregate_filter": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "book_count",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    },
+    "order_by_alias": {
+      "properties": [
+        {
+          "name": "author_name",
+          "datatype": "TEXT",
+          "table": "authors"
+        }
+      ]
+    },
+    "order_by_ordinal": {
+      "properties": [
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors"
+        }
+      ]
+    }
+  }
+}

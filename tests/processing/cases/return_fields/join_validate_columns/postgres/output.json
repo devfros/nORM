@@ -1,0 +1,38 @@
+{
+  "queries": {
+    "ListAuthors": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "authors",
+          "non_column": false
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors",
+          "non_column": false
+        },
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "books",
+          "non_column": false
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "books",
+          "non_column": false
+        },
+        {
+          "name": "author_id",
+          "datatype": "BIGSERIAL",
+          "table": "books",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

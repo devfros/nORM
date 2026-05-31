@@ -1,0 +1,16 @@
+{% import 'common/helpers.jinja2' as helpers %}
+{# Header comment #}
+{% if header_comment %}
+"""{{ header_comment }}"""
+
+{% endif %}
+{# Imports #}
+{% if imports %}
+{% for module, names in imports.items() %}
+{{ helpers.import_line(module, names) }}
+{% endfor %}
+{% endif %}
+
+
+{# Body #}
+{{ body }}

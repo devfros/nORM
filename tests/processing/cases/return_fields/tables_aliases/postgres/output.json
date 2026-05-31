@@ -1,0 +1,44 @@
+{
+  "queries": {
+    "self_join_columns": {
+      "properties": [
+        {
+          "name": "first_id",
+          "table": "authors"
+        },
+        {
+          "name": "second_id",
+          "table": "authors"
+        }
+      ]
+    },
+    "self_join_wildcards": {
+      "properties": [
+        {
+          "name": "id",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "table": "authors"
+        },
+        {
+          "name": "rating",
+          "table": "authors"
+        },
+        {
+          "name": "id",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "table": "authors"
+        },
+        {
+          "name": "rating",
+          "table": "authors"
+        }
+      ]
+    }
+  }
+}

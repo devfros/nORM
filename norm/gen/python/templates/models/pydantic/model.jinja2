@@ -1,0 +1,12 @@
+{% import 'common/helpers.jinja2' as helpers %}
+{# class #}
+class {{ name }}(BaseModel):
+    {% if comment %}
+    """
+    {{ comment }}
+    """
+
+    {% endif %}
+    {% for field_item in fields %}
+    {{- helpers.model_field(field_item) }}
+    {% endfor %}

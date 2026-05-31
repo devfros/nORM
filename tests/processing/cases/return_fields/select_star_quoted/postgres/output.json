@@ -1,0 +1,13 @@
+{
+  "queries": {
+    "GetAll": {
+      "properties": [
+        {
+          "name": "CamelCase",
+          "datatype": "VARCHAR(255)",
+          "table": "users"
+        }
+      ]
+    }
+  }
+}

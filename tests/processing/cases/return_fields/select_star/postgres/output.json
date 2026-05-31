@@ -1,0 +1,42 @@
+{
+  "queries": {
+    "GetAll": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "INT",
+          "table": "users",
+          "non_column": false
+        },
+        {
+          "name": "first_name",
+          "datatype": "VARCHAR(255)",
+          "table": "users",
+          "non_column": false
+        },
+        {
+          "name": "last_name",
+          "datatype": "VARCHAR(255)",
+          "table": "users",
+          "non_column": false
+        },
+        {
+          "name": "age",
+          "datatype": "INT",
+          "table": "users",
+          "non_column": false
+        }
+      ]
+    },
+    "GetIDAll": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "INT",
+          "table": "users",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

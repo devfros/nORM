@@ -1,0 +1,50 @@
+{
+  "queries": {
+    "GetDictTree": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "VARCHAR(36)",
+          "table": "dict",
+          "non_column": false
+        },
+        {
+          "name": "code",
+          "datatype": "VARCHAR(64)",
+          "table": "dict",
+          "non_column": false
+        },
+        {
+          "name": "parent_code",
+          "datatype": "VARCHAR(64)",
+          "table": "dict",
+          "non_column": false
+        },
+        {
+          "name": "label",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "value",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "path",
+          "datatype": "ARRAY<VARCHAR(36)>",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "depth",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

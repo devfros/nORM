@@ -1,0 +1,116 @@
+{
+  "queries": {
+    "TestLeftInner": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "a",
+          "non_column": false
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "b",
+          "non_column": false
+        },
+        {
+          "name": "c",
+          "datatype": "TEXT",
+          "table": "c",
+          "non_column": false
+        }
+      ]
+    },
+    "TestInnerLeft": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "a",
+          "non_column": false
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "b",
+          "non_column": false
+        },
+        {
+          "name": "c",
+          "datatype": "TEXT",
+          "table": "c",
+          "non_column": false
+        }
+      ]
+    },
+    "TestLeftInnerLeftInner": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "a",
+          "non_column": false
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "b",
+          "non_column": false
+        },
+        {
+          "name": "c",
+          "datatype": "TEXT",
+          "table": "c",
+          "non_column": false
+        },
+        {
+          "name": "d",
+          "datatype": "TEXT",
+          "table": "d",
+          "non_column": false
+        },
+        {
+          "name": "e",
+          "datatype": "TEXT",
+          "table": "e",
+          "non_column": false
+        }
+      ]
+    },
+    "TestInnerLeftInnerLeft": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "a",
+          "non_column": false
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "b",
+          "non_column": false
+        },
+        {
+          "name": "c",
+          "datatype": "TEXT",
+          "table": "c",
+          "non_column": false
+        },
+        {
+          "name": "d",
+          "datatype": "TEXT",
+          "table": "d",
+          "non_column": false
+        },
+        {
+          "name": "e",
+          "datatype": "TEXT",
+          "table": "e",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

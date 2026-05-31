@@ -1,0 +1,28 @@
+{
+  "queries": {
+    "select": {
+      "parameters": {
+        "id": {
+          "datatype": "SERIAL"
+        }
+      }
+    },
+    "correlated_filter": {
+      "parameters": {
+        "author_id": {
+          "datatype": "SERIAL"
+        }
+      }
+    },
+    "complex": {
+      "parameters": {
+        "title": {
+          "datatype": "TEXT"
+        },
+        "author_id": {
+          "datatype": "INT"
+        }
+      }
+    }
+  }
+}

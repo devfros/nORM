@@ -1,0 +1,74 @@
+{
+  "queries": {
+    "GreaterThan": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "BOOLEAN",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "LessThan": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "BOOLEAN",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "GreaterThanOrEqual": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "BOOLEAN",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "LessThanOrEqual": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "BOOLEAN",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "NotEqual": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "BOOLEAN",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "AlsoNotEqual": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "BOOLEAN",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Equal": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "BOOLEAN",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

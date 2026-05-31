@@ -1,0 +1,1 @@
+"""Shared placeholder inference utilities."""

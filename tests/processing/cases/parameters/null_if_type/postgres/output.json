@@ -1,0 +1,12 @@
+{
+  "queries": {
+    "GetRestrictedId": {
+      "parameters": {
+        "id": {
+          "datatype": "BIGSERIAL",
+          "nullable": true
+        }
+      }
+    }
+  }
+}

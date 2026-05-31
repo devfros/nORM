@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "StarExpansionCTE": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

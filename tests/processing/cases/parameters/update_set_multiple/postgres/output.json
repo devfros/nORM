@@ -1,0 +1,16 @@
+{
+  "queries": {
+    "UpdateSetMultiple": {
+      "parameters": {
+        "name": {
+          "datatype": "TEXT",
+          "nullable": false
+        },
+        "slug": {
+          "datatype": "TEXT",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

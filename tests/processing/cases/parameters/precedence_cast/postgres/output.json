@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "over_function": {
+      "parameters": {
+        "p": {
+          "datatype": "INT"
+        }
+      }
+    },
+    "over_hard": {
+      "parameters": {
+        "p": {
+          "datatype": "TEXT"
+        }
+      }
+    }
+  }
+}

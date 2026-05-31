@@ -1,0 +1,60 @@
+{
+  "queries": {
+    "cross_join_projection": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "title",
+          "datatype": "TEXT",
+          "table": "books"
+        }
+      ]
+    },
+    "full_join_projection": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "book_id",
+          "datatype": "SERIAL",
+          "table": "books"
+        }
+      ]
+    },
+    "left_join_projection": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "title",
+          "datatype": "TEXT",
+          "table": "books"
+        }
+      ]
+    },
+    "right_join_projection": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "book_id",
+          "datatype": "SERIAL",
+          "table": "books"
+        }
+      ]
+    }
+  }
+}

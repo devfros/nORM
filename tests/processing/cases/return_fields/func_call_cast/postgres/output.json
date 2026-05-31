@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "Demo": {
+      "properties": [
+        {
+          "name": "col1",
+          "datatype": "UUID",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "queries": {
+    "nullable": {
+      "parameters": {
+        "id": {
+          "nullable": true
+        }
+      }
+    },
+    "nullable_and_optional": {
+      "parameters": {
+        "id": {
+          "nullable": true,
+          "optional": true
+        }
+      }
+    },
+    "optional": {
+      "parameters": {
+        "id": {
+          "optional": true
+        }
+      }
+    }
+  }
+}

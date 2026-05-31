@@ -1,0 +1,13 @@
+{
+  "queries": {
+    "GetRestrictedId": {
+      "properties": [
+        {
+          "name": "restricted_id",
+          "datatype": "BIGSERIAL",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

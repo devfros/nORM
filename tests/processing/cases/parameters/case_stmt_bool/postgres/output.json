@@ -1,0 +1,12 @@
+{
+  "queries": {
+    "CaseStatementBoolean": {
+      "parameters": {
+        "id": {
+          "datatype": "TEXT",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

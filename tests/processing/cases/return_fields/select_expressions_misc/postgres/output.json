@@ -1,0 +1,66 @@
+{
+  "queries": {
+    "case_expression": {
+      "properties": [
+        {
+          "name": "rating_band",
+          "datatype": "VARCHAR",
+          "non_column": true
+        }
+      ]
+    },
+    "comparison_projection": {
+      "properties": [
+        {
+          "name": "is_high",
+          "datatype": "BOOLEAN",
+          "non_column": true
+        }
+      ]
+    },
+    "datetime_interval_add": {
+      "properties": [
+        {
+          "name": "available_plus_day",
+          "datatype": "TIMESTAMPTZ",
+          "non_column": true
+        }
+      ]
+    },
+    "expression_without_alias": {
+      "properties": [
+        {
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "logical_projection": {
+      "properties": [
+        {
+          "name": "is_visible",
+          "datatype": "BOOLEAN",
+          "non_column": true
+        }
+      ]
+    },
+    "mixed_numeric_coercion": {
+      "properties": [
+        {
+          "name": "mixed_num",
+          "datatype": "DOUBLE",
+          "non_column": true
+        }
+      ]
+    },
+    "string_concat": {
+      "properties": [
+        {
+          "name": "label",
+          "datatype": "VARCHAR",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "InsertContact": {
+      "parameters": {
+        "pid": {
+          "datatype": "TEXT",
+          "nullable": true,
+          "optional": false
+        },
+        "CustomerName": {
+          "datatype": "TEXT",
+          "nullable": true,
+          "optional": false
+        }
+      }
+    }
+  }
+}

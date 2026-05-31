@@ -1,0 +1,4 @@
+-- repo_name: Repo
+
+-- name: SchemaScopedFilter :many
+SELECT * FROM foo.bar WHERE id = :id;

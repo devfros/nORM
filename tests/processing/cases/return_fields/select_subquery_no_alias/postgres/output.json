@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "Subquery": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "INT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

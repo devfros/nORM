@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "ListPaths": {
+      "properties": [
+        {
+          "name": "point_one",
+          "datatype": "point_type",
+          "table": "paths"
+        },
+        {
+          "name": "point_two",
+          "datatype": "foo.point_type",
+          "table": "paths"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "queries": {
+    "AdvisoryLockOne": {
+      "parameters": {
+        "lock": {
+          "datatype": "BIGINT",
+          "nullable": false
+        }
+      }
+    },
+    "AdvisoryUnlock": {
+      "parameters": {
+        "lock": {
+          "datatype": "BIGINT",
+          "nullable": false
+        }
+      }
+    },
+    "AdvisoryLockExecResult": {
+      "parameters": {
+        "lock": {
+          "datatype": "BIGINT",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

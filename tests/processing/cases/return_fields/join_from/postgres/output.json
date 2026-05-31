@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "MultiFrom": {
+      "properties": [
+        {
+          "name": "email",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

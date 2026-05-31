@@ -1,0 +1,16 @@
+version: "1"
+
+targets:
+  - name: default
+
+    sql:
+      engine: postgres
+      db_schema: ./in/schema.sql
+      repositories: ./in/repos
+
+    gen:
+      out: ./out
+      python:
+        asynchronous: true
+        models: dataclasses
+        max_params: 1

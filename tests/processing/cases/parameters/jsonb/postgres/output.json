@@ -1,0 +1,31 @@
+{
+  "queries": {
+    "InsertFoo": {
+      "parameters": {
+        "a": {
+          "datatype": "JSON",
+          "nullable": false,
+          "optional": false
+        },
+        "b": {
+          "datatype": "JSONB",
+          "nullable": false,
+          "optional": false
+        },
+        "c": {
+          "datatype": "JSON",
+          "nullable": true,
+          "optional": false
+        },
+        "d": {
+          "datatype": "JSONB",
+          "nullable": true,
+          "optional": false
+        }
+      }
+    },
+    "SelectFoo": {
+      "parameters": {}
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "GetBars": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "bar"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "bar"
+        }
+      ]
+    }
+  }
+}

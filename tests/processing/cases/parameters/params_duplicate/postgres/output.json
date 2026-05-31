@@ -1,0 +1,28 @@
+{
+  "queries": {
+    "SelectUserByID": {
+      "parameters": {
+        "id": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    },
+    "SelectUserByName": {
+      "parameters": {
+        "name": {
+          "datatype": "VARCHAR(255)",
+          "nullable": false
+        }
+      }
+    },
+    "SelectUserByAgeCast": {
+      "parameters": {
+        "threshold": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

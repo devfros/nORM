@@ -1,0 +1,57 @@
+{
+  "queries": {
+    "count_over_all": {
+      "properties": [
+        {
+          "name": "total_rows",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    },
+    "named_window": {
+      "properties": [
+        {
+          "name": "rn",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    },
+    "row_number_partition": {
+      "properties": [
+        {
+          "name": "rn",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    },
+    "sum_running_total": {
+      "properties": [
+        {
+          "name": "running_year",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    },
+    "sum_with_frame": {
+      "properties": [
+        {
+          "name": "running_year_sum",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    },
+    "without_alias": {
+      "properties": [
+        {
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

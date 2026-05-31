@@ -1,0 +1,40 @@
+{
+  "queries": {
+    "basic": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors"
+        }
+      ]
+    },
+    "no_returning": {
+      "properties": []
+    },
+    "returning_star": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors"
+        },
+        {
+          "name": "rating",
+          "datatype": "INT",
+          "table": "authors"
+        }
+      ]
+    }
+  }
+}

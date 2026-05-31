@@ -1,0 +1,59 @@
+volumes:
+  postgres-data-norm:
+  mysql-data-norm:
+  clickhouse-data-norm:
+
+services:
+  postgres-norm:
+    container_name: postgres-norm
+    image: postgres:15
+    env_file: .env
+    volumes:
+      - postgres-data-norm:/var/lib/postgresql/data
+    restart: always
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    networks:
+      - norm-network
+
+  mysql-norm:
+    container_name: mysql-norm
+    image: mysql:8
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - mysql-data-norm:/var/lib/mysql
+    restart: always
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    networks:
+      - norm-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  clickhouse-norm:
+    container_name: clickhouse-norm
+    image: clickhouse/clickhouse-server:24.8
+    env_file: .env
+    volumes:
+      - clickhouse-data-norm:/var/lib/clickhouse
+    restart: always
+    ports:
+      - "${CLICKHOUSE_PORT:-9000}:9000"
+      - "${CLICKHOUSE_HTTP_PORT:-8123}:8123"
+    networks:
+      - norm-network
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+
+networks:
+  norm-network:
+    name: norm-network

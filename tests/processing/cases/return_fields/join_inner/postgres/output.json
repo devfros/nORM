@@ -1,0 +1,32 @@
+{
+  "queries": {
+    "SelectAllJoinedAlias": {
+      "properties": [
+        {
+          "name": "ID",
+          "datatype": "INT",
+          "table": "events"
+        },
+        {
+          "name": "ID",
+          "datatype": "INT",
+          "table": "events"
+        }
+      ]
+    },
+    "SelectAllJoined": {
+      "properties": [
+        {
+          "name": "ID",
+          "datatype": "INT",
+          "table": "events"
+        },
+        {
+          "name": "ID",
+          "datatype": "INT",
+          "table": "events"
+        }
+      ]
+    }
+  }
+}

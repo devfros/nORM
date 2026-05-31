@@ -1,0 +1,90 @@
+[project]
+name = "norm"
+version = "0.1.0"
+description = "Replace ORM complexity with SQL-first codegen"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11,<3.15"
+authors = [
+  { name = "devfros", email = "afrosrajabov1207@mail.ru" },
+]
+keywords = [
+  "sql",
+  "codegen",
+  "orm",
+  "database",
+  "postgres",
+  "mysql",
+  "sqlite",
+  "clickhouse",
+  "duckdb",
+  "sqlc",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Database",
+  "Topic :: Software Development :: Code Generators",
+  "Typing :: Typed",
+]
+dependencies = [
+  "PyYAML==6.0.3",
+  "sqlglot==30.8.0",
+  "click==8.3.1",
+  "rich==14.3.3",
+  "jinja2==3.1.6",
+]
+
+[project.urls]
+Homepage = "https://devfros.github.io/norm"
+Documentation = "https://devfros.github.io/norm"
+Repository = "https://github.com/devfros/norm"
+Issues = "https://github.com/devfros/norm/issues"
+Changelog = "https://github.com/devfros/norm/blob/main/CHANGELOG.md"
+
+[project.scripts]
+norm = "norm.cli.main:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = true
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+ruff = "^0.11.11"
+pydantic = "^2.12.5"
+psycopg = { version = "^3.2", extras = ["binary"] }
+aiosqlite = "^0.21.0"
+asyncmy = "^0.2.10"
+mysqlclient = "^2.2.7"
+duckdb = "^1.2.2"
+aioduck = "^2025.9.1"
+clickhouse-driver = "^0.2.9"
+asynch = "==0.3.0"
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+norecursedirs = [".git", ".venv", "cases", "out"]
+markers = [
+    "runtime: e2e runtime tests against a live database",
+    "sqlite: runtime test requires sqlite",
+    "postgres: runtime test requires postgres",
+    "mysql: runtime test requires mysql",
+    "duckdb: runtime test requires duckdb",
+    "clickhouse: runtime test requires clickhouse",
+    "async_mode: runtime test uses async generated python",
+]

@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "main": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

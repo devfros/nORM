@@ -1,0 +1,88 @@
+{
+  "queries": {
+    "avg": {
+      "properties": [
+        {
+          "name": "avg_rating",
+          "datatype": "DOUBLE",
+          "non_column": true
+        }
+      ]
+    },
+    "coalesce": {
+      "properties": [
+        {
+          "name": "rating_safe",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "count": {
+      "properties": [
+        {
+          "name": "total_authors",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    },
+    "count_distinct": {
+      "properties": [
+        {
+          "name": "unique_names",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    },
+    "count_without_alias": {
+      "properties": [
+        {
+          "datatype": "BIGINT"
+        }
+      ]
+    },
+    "custom_function": {
+      "error": {
+        "code": "AMBIGUOUS_COLUMN"
+      }
+    },
+    "lower": {
+      "properties": [
+        {
+          "name": "lower_name",
+          "datatype": "VARCHAR",
+          "non_column": true
+        }
+      ]
+    },
+    "max": {
+      "properties": [
+        {
+          "name": "max_rating",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "min": {
+      "properties": [
+        {
+          "name": "min_rating",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "nested_lower_coalesce": {
+      "properties": [
+        {
+          "name": "canonical_name",
+          "datatype": "VARCHAR",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

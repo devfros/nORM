@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "update_from_returning_join_col": {
+      "properties": [
+        {
+          "name": "author_id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "matched_title",
+          "datatype": "TEXT",
+          "table": "books"
+        }
+      ]
+    }
+  }
+}

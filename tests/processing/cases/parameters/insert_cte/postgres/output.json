@@ -1,0 +1,28 @@
+{
+  "queries": {
+    "InsertCode": {
+      "parameters": {
+        "created_by": {
+          "datatype": "TEXT",
+          "nullable": false,
+          "optional": false
+        },
+        "test_id": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        },
+        "code": {
+          "datatype": "TEXT",
+          "nullable": true,
+          "optional": false
+        },
+        "hash": {
+          "datatype": "TEXT",
+          "nullable": true,
+          "optional": false
+        }
+      }
+    }
+  }
+}

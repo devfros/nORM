@@ -1,0 +1,26 @@
+{
+  "queries": {
+    "FullJoin": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "bar_id",
+          "datatype": "INT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "bar",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

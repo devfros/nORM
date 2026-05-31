@@ -1,0 +1,56 @@
+{
+  "queries": {
+    "concat": {
+      "parameters": {
+        "first": {
+          "datatype": "TEXT"
+        },
+        "last": {
+          "datatype": "TEXT"
+        }
+      }
+    },
+    "length": {
+      "parameters": {
+        "text": {
+          "datatype": "TEXT"
+        }
+      }
+    },
+    "lower": {
+      "parameters": {
+        "text": {
+          "datatype": "TEXT"
+        }
+      }
+    },
+    "replace": {
+      "parameters": {
+        "text": {
+          "datatype": "TEXT"
+        }
+      }
+    },
+    "substring": {
+      "parameters": {
+        "text": {
+          "datatype": "TEXT"
+        }
+      }
+    },
+    "trim": {
+      "parameters": {
+        "text": {
+          "datatype": "TEXT"
+        }
+      }
+    },
+    "upper": {
+      "parameters": {
+        "text": {
+          "datatype": "TEXT"
+        }
+      }
+    }
+  }
+}

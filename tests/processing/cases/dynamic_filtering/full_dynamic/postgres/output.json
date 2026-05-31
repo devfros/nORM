@@ -1,0 +1,119 @@
+{
+  "queries": {
+    "main": {
+      "versions": [
+        {
+          "params": [],
+          "query": "SELECT a.id AS id FROM authors AS a"
+        },
+        {
+          "params": [
+            "name"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s"
+        },
+        {
+          "params": [
+            "rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.rating = %(rating)s"
+        },
+        {
+          "params": [
+            "namelike"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name LIKE %(namelike)s"
+        },
+        {
+          "params": [
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.rating > %(max_rating)s"
+        },
+        {
+          "params": [
+            "name",
+            "rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s AND a.rating = %(rating)s"
+        },
+        {
+          "params": [
+            "name",
+            "namelike"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s OR a.name LIKE %(namelike)s"
+        },
+        {
+          "params": [
+            "name",
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s OR a.rating > %(max_rating)s"
+        },
+        {
+          "params": [
+            "rating",
+            "namelike"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.rating = %(rating)s OR a.name LIKE %(namelike)s"
+        },
+        {
+          "params": [
+            "rating",
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.rating = %(rating)s OR a.rating > %(max_rating)s"
+        },
+        {
+          "params": [
+            "namelike",
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name LIKE %(namelike)s AND a.rating > %(max_rating)s"
+        },
+        {
+          "params": [
+            "name",
+            "rating",
+            "namelike"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s AND a.rating = %(rating)s OR a.name LIKE %(namelike)s"
+        },
+        {
+          "params": [
+            "name",
+            "rating",
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s AND a.rating = %(rating)s OR a.rating > %(max_rating)s"
+        },
+        {
+          "params": [
+            "name",
+            "namelike",
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s OR a.name LIKE %(namelike)s AND a.rating > %(max_rating)s"
+        },
+        {
+          "params": [
+            "rating",
+            "namelike",
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.rating = %(rating)s OR a.name LIKE %(namelike)s AND a.rating > %(max_rating)s"
+        },
+        {
+          "params": [
+            "name",
+            "rating",
+            "namelike",
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s AND a.rating = %(rating)s OR a.name LIKE %(namelike)s AND a.rating > %(max_rating)s"
+        }
+      ]
+    }
+  }
+}

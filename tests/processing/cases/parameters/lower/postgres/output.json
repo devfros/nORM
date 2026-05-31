@@ -1,0 +1,16 @@
+{
+  "queries": {
+    "Lower": {
+      "parameters": {
+        "bar": {
+          "datatype": "TEXT",
+          "nullable": false
+        },
+        "bat": {
+          "datatype": "VARCHAR",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

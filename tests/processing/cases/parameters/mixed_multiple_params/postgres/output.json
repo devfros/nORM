@@ -1,0 +1,17 @@
+{
+  "queries": {
+    "main": {
+      "parameters": {
+        "author_id": {
+          "datatype": "INT"
+        },
+        "title": {
+          "datatype": "TEXT"
+        },
+        "year": {
+          "datatype": "INT"
+        }
+      }
+    }
+  }
+}

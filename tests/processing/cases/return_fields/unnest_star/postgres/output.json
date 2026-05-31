@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "GetPlanItems": {
+      "properties": [
+        {
+          "name": "plan_id",
+          "datatype": "BIGINT",
+          "table": "plan_items"
+        },
+        {
+          "name": "item_id",
+          "datatype": "BIGINT",
+          "table": "plan_items"
+        }
+      ]
+    }
+  }
+}

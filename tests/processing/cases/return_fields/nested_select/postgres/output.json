@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "NestedSelect": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGINT",
+          "table": "test",
+          "non_column": false
+        },
+        {
+          "name": "count",
+          "datatype": "BIGINT",
+          "table": "test",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

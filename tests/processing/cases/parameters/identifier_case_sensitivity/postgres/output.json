@@ -1,0 +1,39 @@
+{
+  "queries": {
+    "GetAuthor": {
+      "parameters": {
+        "id": {
+          "datatype": "BIGINT",
+          "nullable": false,
+          "optional": false
+        }
+      }
+    },
+    "ListAuthors": {
+      "parameters": {}
+    },
+    "CreateAuthor": {
+      "parameters": {
+        "name": {
+          "datatype": "TEXT",
+          "nullable": false,
+          "optional": false
+        },
+        "bio": {
+          "datatype": "TEXT",
+          "nullable": true,
+          "optional": false
+        }
+      }
+    },
+    "DeleteAuthor": {
+      "parameters": {
+        "id": {
+          "datatype": "BIGINT",
+          "nullable": false,
+          "optional": false
+        }
+      }
+    }
+  }
+}

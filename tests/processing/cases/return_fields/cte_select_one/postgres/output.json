@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "TestRecursive": {
+      "properties": [
+        {
+          "name": "foo",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

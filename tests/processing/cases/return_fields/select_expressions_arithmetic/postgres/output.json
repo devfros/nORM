@@ -1,0 +1,58 @@
+{
+  "queries": {
+    "arithmetic_div": {
+      "properties": [
+        {
+          "name": "rating_half",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    },
+    "arithmetic_double": {
+      "properties": [
+        {
+          "name": "next_rating",
+          "datatype": "DOUBLE",
+          "non_column": true
+        }
+      ]
+    },
+    "arithmetic_int": {
+      "properties": [
+        {
+          "name": "next_rating",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "arithmetic_mod": {
+      "properties": [
+        {
+          "name": "rating_mod_two",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "arithmetic_mul": {
+      "properties": [
+        {
+          "name": "rating_times_two",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "arithmetic_sub": {
+      "properties": [
+        {
+          "name": "rating_minus_one",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

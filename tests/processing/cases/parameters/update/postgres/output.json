@@ -1,0 +1,43 @@
+{
+  "queries": {
+    "basic": {
+      "parameters": {
+        "name": {
+          "datatype": "TEXT",
+          "nullable": false
+        },
+        "rating": {
+          "datatype": "INT",
+          "nullable": true
+        },
+        "id": {
+          "datatype": "SERIAL"
+        }
+      }
+    },
+    "patch_nonnull": {
+      "parameters": {
+        "flag": {
+          "datatype": "BOOLEAN",
+          "nullable": false
+        },
+        "name": {
+          "datatype": "TEXT",
+          "nullable": false
+        }
+      }
+    },
+    "patch_nullable": {
+      "parameters": {
+        "flag": {
+          "datatype": "BOOLEAN",
+          "nullable": false
+        },
+        "rating": {
+          "datatype": "INT",
+          "nullable": true
+        }
+      }
+    }
+  }
+}

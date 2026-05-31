@@ -1,0 +1,35 @@
+{
+  "queries": {
+    "basic_projection": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        }
+      ]
+    },
+    "chained_ctes": {
+      "properties": [
+        {
+          "name": "author_name",
+          "datatype": "TEXT",
+          "table": "authors"
+        },
+        {
+          "name": "book_title",
+          "datatype": "TEXT",
+          "table": "books"
+        }
+      ]
+    },
+    "count": {
+      "properties": [
+        {
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

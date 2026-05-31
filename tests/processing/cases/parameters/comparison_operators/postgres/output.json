@@ -1,0 +1,43 @@
+{
+  "queries": {
+    "gt": {
+      "parameters": {
+        "min_rating": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    },
+    "gte": {
+      "parameters": {
+        "min_rating": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    },
+    "lt": {
+      "parameters": {
+        "max_rating": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    },
+    "lte": {
+      "parameters": {
+        "max_rating": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    },
+    "neq": {
+      "parameters": {
+        "excluded_id": {
+          "datatype": "SERIAL"
+        }
+      }
+    }
+  }
+}

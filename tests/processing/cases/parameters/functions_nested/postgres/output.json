@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "abs_round": {
+      "parameters": {
+        "num": {
+          "datatype": "DECIMAL"
+        }
+      }
+    },
+    "lower_trim": {
+      "parameters": {
+        "text": {
+          "datatype": "TEXT"
+        }
+      }
+    }
+  }
+}

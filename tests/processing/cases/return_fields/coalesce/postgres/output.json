@@ -1,0 +1,100 @@
+{
+  "queries": {
+    "CoalesceString": {
+      "properties": [
+        {
+          "name": "login",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "CoalesceNumeric": {
+      "properties": [
+        {
+          "name": "login",
+          "datatype": "BIGINT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "CoalesceStringColumns": {
+      "properties": [
+        {
+          "name": "bar",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "bat",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "column_2",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "CoalesceNumericColumns": {
+      "properties": [
+        {
+          "name": "baz",
+          "datatype": "BIGINT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "qux",
+          "datatype": "BIGINT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "column_2",
+          "datatype": "BIGINT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "CoalesceStringNull": {
+      "properties": [
+        {
+          "name": "bar",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "column_1",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "CoalesceNumericNull": {
+      "properties": [
+        {
+          "name": "baz",
+          "datatype": "BIGINT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "column_1",
+          "datatype": "BIGINT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "UpdateAuthor": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "names",
+          "datatype": "ARRAY<TEXT>",
+          "table": "authors"
+        }
+      ]
+    }
+  }
+}

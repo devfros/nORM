@@ -1,0 +1,47 @@
+{
+  "queries": {
+    "basic": {
+      "properties": [
+        {
+          "name": "id",
+          "table": "authors",
+          "datatype": "SERIAL"
+        },
+        {
+          "name": "name",
+          "table": "authors",
+          "datatype": "TEXT"
+        }
+      ]
+    },
+    "expression_alias": {
+      "properties": [
+        {
+          "name": "author_id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "next_rating",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "insert_select_returning": {
+      "properties": [
+        {
+          "name": "id",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "table": "authors"
+        }
+      ]
+    },
+    "no_returning": {
+      "properties": []
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "queries": {
+    "GetGroups": {
+      "parameters": {
+        "groupName": {
+          "datatype": "TEXT",
+          "nullable": true
+        },
+        "groupId": {
+          "datatype": "SERIAL",
+          "nullable": true
+        }
+      }
+    }
+  }
+}

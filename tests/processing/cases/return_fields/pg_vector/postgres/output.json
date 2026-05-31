@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "NearestNeighbor": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "items"
+        },
+        {
+          "name": "embedding",
+          "datatype": "VECTOR(3)",
+          "table": "items"
+        }
+      ]
+    }
+  }
+}

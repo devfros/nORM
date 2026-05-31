@@ -1,0 +1,4 @@
+-- repo_name: Repo
+
+-- name: Subquery :many
+SELECT * FROM (SELECT * FROM foo);

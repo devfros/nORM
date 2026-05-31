@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "GetBar": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "bar_id",
+          "datatype": "BIGSERIAL",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "main": {
+      "parameters": {
+        "id": {
+          "datatype": "SERIAL"
+        },
+        "name": {
+          "datatype": "TEXT"
+        },
+        "rating": {
+          "datatype": "INT",
+          "nullable": true
+        }
+      }
+    }
+  }
+}

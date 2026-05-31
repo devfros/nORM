@@ -1,0 +1,13 @@
+{
+  "queries": {
+    "ColdCities": {
+      "parameters": {
+        "temp_lo": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "queries": {
+    "WithAs": {
+      "properties": [
+        {
+          "name": "x",
+          "datatype": "INT",
+          "non_column": true
+        },
+        {
+          "name": "y",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "WithoutAs": {
+      "properties": [
+        {
+          "name": "x",
+          "datatype": "INT",
+          "non_column": true
+        },
+        {
+          "name": "y",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

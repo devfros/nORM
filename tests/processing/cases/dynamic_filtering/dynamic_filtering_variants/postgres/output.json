@@ -1,0 +1,147 @@
+{
+  "queries": {
+    "no_dynamic": {
+      "versions": [
+        {
+          "params": [],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.id = %(id)s"
+        },
+        {
+          "params": [
+            "id"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.id = %(id)s"
+        }
+      ]
+    },
+    "single_optional": {
+      "versions": [
+        {
+          "params": [],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.id = %(id)s"
+        },
+        {
+          "params": [
+            "id"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.id = %(id)s"
+        },
+        {
+          "params": [
+            "rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.id = %(id)s OR a.rating > %(rating)s"
+        }
+      ]
+    },
+    "not": {
+      "versions": [
+        {
+          "params": [],
+          "query": "SELECT a.id AS id FROM authors AS a"
+        },
+        {
+          "params": [
+            "id"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE NOT a.id = %(id)s"
+        },
+        {
+          "params": [
+            "name"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s"
+        },
+        {
+          "params": [
+            "id",
+            "name"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE NOT a.id = %(id)s OR a.name = %(name)s"
+        }
+      ]
+    },
+    "parenthesis": {
+      "versions": [
+        {
+          "params": [],
+          "query": "SELECT a.id AS id FROM authors AS a"
+        },
+        {
+          "params": [
+            "name"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s"
+        },
+        {
+          "params": [
+            "rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE (a.rating = %(rating)s)"
+        },
+        {
+          "params": [
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE (a.rating > %(max_rating)s)"
+        },
+        {
+          "params": [
+            "name",
+            "rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s AND (a.rating = %(rating)s)"
+        },
+        {
+          "params": [
+            "name",
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s AND (a.rating > %(max_rating)s)"
+        },
+        {
+          "params": [
+            "rating",
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE (a.rating = %(rating)s OR a.rating > %(max_rating)s)"
+        },
+        {
+          "params": [
+            "name",
+            "rating",
+            "max_rating"
+          ],
+          "query": "SELECT a.id AS id FROM authors AS a WHERE a.name = %(name)s AND (a.rating = %(rating)s OR a.rating > %(max_rating)s)"
+        }
+      ]
+    },
+    "having": {
+      "versions": [
+        {
+          "params": [],
+          "query": "SELECT a.id AS id, COUNT(b.id) AS book_count FROM authors AS a JOIN books AS b ON b.author_id = a.id GROUP BY a.id"
+        },
+        {
+          "params": [
+            "min_books"
+          ],
+          "query": "SELECT a.id AS id, COUNT(b.id) AS book_count FROM authors AS a JOIN books AS b ON b.author_id = a.id GROUP BY a.id HAVING COUNT(b.id) >= %(min_books)s"
+        },
+        {
+          "params": [
+            "min_rating"
+          ],
+          "query": "SELECT a.id AS id, COUNT(b.id) AS book_count FROM authors AS a JOIN books AS b ON b.author_id = a.id GROUP BY a.id HAVING MAX(a.rating) > %(min_rating)s"
+        },
+        {
+          "params": [
+            "min_books",
+            "min_rating"
+          ],
+          "query": "SELECT a.id AS id, COUNT(b.id) AS book_count FROM authors AS a JOIN books AS b ON b.author_id = a.id GROUP BY a.id HAVING COUNT(b.id) >= %(min_books)s AND MAX(a.rating) > %(min_rating)s"
+        }
+      ]
+    }
+  }
+}

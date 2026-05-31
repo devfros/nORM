@@ -1,0 +1,29 @@
+{
+  "queries": {
+    "quoted_alias": {
+      "properties": [
+        {
+          "name": "AuthorID",
+          "datatype": "SERIAL",
+          "table": "authors"
+        }
+      ]
+    },
+    "quoted_column_identifier": {
+      "properties": [
+        {
+          "name": "quoted_name",
+          "table": "authors"
+        }
+      ]
+    },
+    "quoted_table_identifier": {
+      "properties": [
+        {
+          "name": "id",
+          "table": "authors"
+        }
+      ]
+    }
+  }
+}

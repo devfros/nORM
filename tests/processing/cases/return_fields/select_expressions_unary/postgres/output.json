@@ -1,0 +1,31 @@
+{
+  "queries": {
+    "unary_plus": {
+      "properties": [
+        {
+          "name": "pos_rating",
+          "datatype": "INT",
+          "non_column": false
+        }
+      ]
+    },
+    "unary_negation": {
+      "properties": [
+        {
+          "name": "neg_rating",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    },
+    "not_expression": {
+      "properties": [
+        {
+          "name": "not_high",
+          "datatype": "BOOLEAN",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

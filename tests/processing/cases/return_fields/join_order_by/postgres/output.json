@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "GetAuthor": {
+      "properties": [
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

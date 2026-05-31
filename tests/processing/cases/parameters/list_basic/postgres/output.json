@@ -1,0 +1,11 @@
+{
+  "queries": {
+    "main": {
+      "parameters": {
+        "ids": {
+          "datatype": "ARRAY<SERIAL>"
+        }
+      }
+    }
+  }
+}

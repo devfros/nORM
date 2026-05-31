@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "SubqueryCalcColumn": {
+      "properties": [
+        {
+          "name": "sum",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

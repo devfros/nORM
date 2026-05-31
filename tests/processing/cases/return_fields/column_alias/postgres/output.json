@@ -1,0 +1,53 @@
+{
+  "queries": {
+    "GetUsers": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "INT",
+          "table": "users"
+        },
+        {
+          "name": "fname",
+          "datatype": "VARCHAR(100)",
+          "table": "users"
+        },
+        {
+          "name": "lname",
+          "datatype": "VARCHAR(100)",
+          "table": "users"
+        },
+        {
+          "name": "email",
+          "datatype": "VARCHAR(100)",
+          "table": "users"
+        },
+        {
+          "name": "created_at",
+          "datatype": "TIMESTAMPTZ",
+          "table": "users"
+        },
+        {
+          "name": "rank_email",
+          "datatype": "FLOAT",
+          "non_column": true
+        },
+        {
+          "name": "rank_fname",
+          "datatype": "FLOAT",
+          "non_column": true
+        },
+        {
+          "name": "rank_lname",
+          "datatype": "FLOAT",
+          "non_column": true
+        },
+        {
+          "name": "similarity",
+          "datatype": "FLOAT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

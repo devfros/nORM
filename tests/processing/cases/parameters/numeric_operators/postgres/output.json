@@ -1,0 +1,87 @@
+{
+  "queries": {
+    "between": {
+      "parameters": {
+        "num": {
+          "datatype": "DECIMAL"
+        }
+      }
+    },
+    "between_nullable_bound": {
+      "parameters": {
+        "p": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    },
+    "cast": {
+      "parameters": {
+        "num": {
+          "datatype": "DECIMAL",
+          "nullable": false
+        }
+      }
+    },
+    "divide": {
+      "parameters": {
+        "rating": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    },
+    "equal": {
+      "parameters": {
+        "num": {
+          "datatype": "DOUBLE"
+        }
+      }
+    },
+    "in": {
+      "parameters": {
+        "num": {
+          "datatype": "DECIMAL"
+        }
+      }
+    },
+    "modulo": {
+      "parameters": {
+        "rating": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    },
+    "multiply": {
+      "parameters": {
+        "rating": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    },
+    "nested": {
+      "parameters": {
+        "num": {
+          "datatype": "DOUBLE"
+        }
+      }
+    },
+    "scientific": {
+      "parameters": {
+        "num": {
+          "datatype": "DOUBLE"
+        }
+      }
+    },
+    "subtract": {
+      "parameters": {
+        "rating": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

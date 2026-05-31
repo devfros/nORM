@@ -1,0 +1,104 @@
+{
+  "queries": {
+    "SelectTest": {
+      "properties": [
+        {
+          "name": "v_daterange_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_datemultirange_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_tsrange_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_tsmultirange_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_tstzrange_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_tstzmultirange_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_numrange_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_nummultirange_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_int4range_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_int4multirange_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_int8range_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_int8multirange_null",
+          "table": "test_table"
+        },
+        {
+          "name": "v_daterange",
+          "table": "test_table"
+        },
+        {
+          "name": "v_datemultirange",
+          "table": "test_table"
+        },
+        {
+          "name": "v_tsrange",
+          "table": "test_table"
+        },
+        {
+          "name": "v_tsmultirange",
+          "table": "test_table"
+        },
+        {
+          "name": "v_tstzrange",
+          "table": "test_table"
+        },
+        {
+          "name": "v_tstzmultirange",
+          "table": "test_table"
+        },
+        {
+          "name": "v_numrange",
+          "table": "test_table"
+        },
+        {
+          "name": "v_nummultirange",
+          "table": "test_table"
+        },
+        {
+          "name": "v_int4range",
+          "table": "test_table"
+        },
+        {
+          "name": "v_int4multirange",
+          "table": "test_table"
+        },
+        {
+          "name": "v_int8range",
+          "table": "test_table"
+        },
+        {
+          "name": "v_int8multirange",
+          "table": "test_table"
+        }
+      ]
+    }
+  }
+}

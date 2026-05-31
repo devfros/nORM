@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "Test2": {
+      "parameters": {
+        "val": {
+          "datatype": "TEXT",
+          "nullable": false
+        }
+      }
+    },
+    "Test3": {
+      "parameters": {
+        "val": {
+          "datatype": "TEXT",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "queries": {
+    "any_operator_flag": {
+      "properties": [
+        {
+          "name": "has_fiction",
+          "datatype": "BOOLEAN",
+          "non_column": true
+        }
+      ]
+    },
+    "array_subscript": {
+      "properties": [
+        {
+          "name": "first_tag",
+          "datatype": "VARCHAR",
+          "non_column": true
+        }
+      ]
+    },
+    "at_time_zone": {
+      "properties": [
+        {
+          "name": "available_utc",
+          "datatype": "TIMESTAMPTZ",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

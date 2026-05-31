@@ -1,0 +1,24 @@
+{
+  "queries": {
+    "GetTasksByStatus": {
+      "parameters": {
+        "status": {
+          "datatype": "status",
+          "nullable": false
+        }
+      }
+    },
+    "CreateTask": {
+      "parameters": {
+        "title": {
+          "datatype": "TEXT",
+          "nullable": false
+        },
+        "status": {
+          "datatype": "status",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

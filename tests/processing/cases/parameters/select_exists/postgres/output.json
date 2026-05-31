@@ -1,0 +1,12 @@
+{
+  "queries": {
+    "BarExists": {
+      "parameters": {
+        "id": {
+          "datatype": "SERIAL",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+version: "1"
+
+targets:
+  - name: default
+
+    sql:
+      engine: postgres # mysql, sqlite, duckdb, clickhouse
+      db_schema: ./norm_in/schema.sql
+
+      repositories: ./norm_in/repositories
+
+    gen:
+      out: ./norm_out
+      python:
+        asynchronous: true
+        models: pydantic # dataclasses
+        max_params: 10

@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "StarExpansionSubquery": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo"
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo"
+        }
+      ]
+    }
+  }
+}

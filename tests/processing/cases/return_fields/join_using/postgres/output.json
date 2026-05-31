@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "SelectJoinUsing": {
+      "properties": [
+        {
+          "name": "fk",
+          "datatype": "INT",
+          "table": "t1"
+        },
+        {
+          "name": "column_1",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

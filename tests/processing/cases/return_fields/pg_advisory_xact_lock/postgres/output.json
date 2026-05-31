@@ -1,0 +1,34 @@
+{
+  "queries": {
+    "AdvisoryLockOne": {
+      "properties": [
+        {
+          "name": "pg_advisory_lock",
+          "datatype": "VOID",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "AdvisoryUnlock": {
+      "properties": [
+        {
+          "name": "pg_advisory_unlock",
+          "datatype": "BOOLEAN",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "AdvisoryLockExecResult": {
+      "properties": [
+        {
+          "name": "pg_advisory_lock",
+          "datatype": "VOID",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

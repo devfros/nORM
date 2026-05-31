@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "CastCoalesce": {
+      "properties": [
+        {
+          "name": "login",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

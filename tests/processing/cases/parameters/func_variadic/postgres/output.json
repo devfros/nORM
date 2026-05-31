@@ -1,0 +1,33 @@
+{
+  "queries": {
+    "UpdateJ": {
+      "parameters": {
+        "id": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        },
+        "a": {
+          "datatype": "TEXT",
+          "nullable": false,
+          "optional": false
+        },
+        "b": {
+          "datatype": "TEXT",
+          "nullable": false,
+          "optional": false
+        },
+        "c": {
+          "datatype": "TEXT",
+          "nullable": false,
+          "optional": false
+        },
+        "d": {
+          "datatype": "TEXT",
+          "nullable": false,
+          "optional": false
+        }
+      }
+    }
+  }
+}

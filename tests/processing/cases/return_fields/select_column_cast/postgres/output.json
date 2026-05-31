@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "SelectColumnCast": {
+      "properties": [
+        {
+          "name": "bar",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

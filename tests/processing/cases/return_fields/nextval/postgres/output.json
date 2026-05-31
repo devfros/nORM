@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "GetNextID": {
+      "properties": [
+        {
+          "name": "pk",
+          "datatype": "BIGINT",
+          "non_column": true
+        },
+        {
+          "name": "pk",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

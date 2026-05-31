@@ -1,0 +1,16 @@
+{
+  "queries": {
+    "FooByAandB": {
+      "parameters": {
+        "a": {
+          "datatype": "TEXT",
+          "nullable": false
+        },
+        "b": {
+          "datatype": "TEXT",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

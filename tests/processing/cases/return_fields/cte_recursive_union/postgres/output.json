@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "ListCaseIntentHistory": {
+      "properties": [
+        {
+          "name": "child",
+          "datatype": "BIGINT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "group_",
+          "datatype": "VARCHAR",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

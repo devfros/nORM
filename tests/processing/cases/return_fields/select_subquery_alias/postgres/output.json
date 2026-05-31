@@ -1,0 +1,28 @@
+{
+  "queries": {
+    "FindWallets": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "wallets"
+        },
+        {
+          "name": "address",
+          "datatype": "VARCHAR(44)",
+          "table": "wallets"
+        },
+        {
+          "name": "balance",
+          "datatype": "DECIMAL(32, 18)",
+          "table": "wallets"
+        },
+        {
+          "name": "total_balance",
+          "datatype": "DECIMAL(32, 18)",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

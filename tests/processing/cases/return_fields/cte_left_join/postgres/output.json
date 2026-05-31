@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "BadQuery": {
+      "properties": [
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors",
+          "non_column": false
+        },
+        {
+          "name": "bio",
+          "datatype": "TEXT",
+          "table": "authors",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

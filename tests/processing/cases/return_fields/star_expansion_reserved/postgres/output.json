@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "StarExpansionReserved": {
+      "properties": [
+        {
+          "name": "group",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "key",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

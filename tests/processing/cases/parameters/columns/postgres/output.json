@@ -1,0 +1,29 @@
+{
+  "queries": {
+    "direct": {
+      "parameters": {
+        "id": {
+          "datatype": "SERIAL"
+        }
+      }
+    },
+    "nullability": {
+      "parameters": {
+        "rating": {
+          "datatype": "INT",
+          "nullable": false
+        },
+        "name": {
+          "datatype": "TEXT"
+        }
+      }
+    },
+    "text": {
+      "parameters": {
+        "name": {
+          "datatype": "TEXT"
+        }
+      }
+    }
+  }
+}

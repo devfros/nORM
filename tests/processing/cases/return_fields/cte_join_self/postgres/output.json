@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "ListItems": {
+      "properties": [
+        {
+          "name": "id1",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "id2",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

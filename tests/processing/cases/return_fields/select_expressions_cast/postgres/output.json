@@ -1,0 +1,40 @@
+{
+  "queries": {
+    "cast_expression": {
+      "properties": [
+        {
+          "name": "rating_txt",
+          "datatype": "TEXT",
+          "non_column": true
+        }
+      ]
+    },
+    "cast_array_int": {
+      "properties": [
+        {
+          "name": "maybe_ids",
+          "datatype": "ARRAY<INT>",
+          "non_column": true
+        }
+      ]
+    },
+    "cast_array_shorthand": {
+      "properties": [
+        {
+          "name": "tags_txt",
+          "datatype": "ARRAY<TEXT>",
+          "non_column": true
+        }
+      ]
+    },
+    "cast_array_varchar": {
+      "properties": [
+        {
+          "name": "rating_tags",
+          "datatype": "ARRAY<VARCHAR>",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{% import 'common/helpers.jinja2' as ut %}
+{% import 'query_modifiers.jinja2' as mods %}
+
+{%- macro no_result() %}
+{{ vars.result }} = None
+{% endmacro -%}
+
+{% macro one_result() %}
+{% set fetch_func = ut.attribute(vars.db_cursor, 'fetchone') %}
+{% set fetch_call = ut.call(fetch_func, None, None, context.is_async) %}
+{{ ut.assign(vars.result, fetch_call) }}
+{# check none result #}
+if {{ vars.result }} is None:
+    return None
+
+{{ vars.result }} = {{ return_value().rstrip() }}
+{% endmacro -%}
+
+{% macro many_result() %}
+{% if context.is_async %}
+{{ vars.result }} = [
+    {{ return_value().rstrip() | indent(4) }}
+    async for {{ vars.result_item }} in {{ vars.db_cursor }}
+]
+{% else %}
+{{ vars.result }} = [
+    {{ return_value().rstrip() | indent(4) }}
+    for {{ vars.result_item }} in {{ vars.db_cursor }}.fetchall()
+]
+{% endif %}
+{% endmacro -%}
+
+{% macro return_value() %}
+{% set map_target = vars.result_item if context.command == 'many' else vars.result %}
+{% if not context.output_map %}
+{{  map_target ~ '[0]' }}
+{% else %}
+{{ ut.map_result_to_schema(map_target, context.output_map) }}
+{% endif %}
+{% endmacro -%}
+
+{% macro exec_result(last_id) %}
+{{ vars.result }} = {{ vars.db_cursor }}.{{ 'lastrowid' if last_id else 'rowcount' }}
+{% endmacro -%}
+
+{{- ut.def(context.name, context.is_async) }}(
+    {# self #}
+    {% if context.is_class_method %}
+    self,
+    {% endif %}
+    {# parameters #}
+    {% if context.parameters %}
+    {% for param in context.parameters %}
+    {{ ut.func_param(param) }},
+    {% endfor %}
+    {% endif %}
+) -> {{ context.return_annotation }}:
+    {% if context.comment %}
+    """
+    {{ context.comment  | indent(4) }}
+    """
+
+    {% endif %}
+    {# query #}
+    {{ vars.query }} = """
+        {{ context.query_str | indent(8)}}
+    """
+
+{% if context.has_query_params %}
+{{ mods.render_params(context, vars) | indent(4, true) }}
+{% endif -%}
+{%- set modifier_blocks = [] -%}
+{%- set dynamic_filter = mods.render_dynamic_filter(context, vars) | trim -%}
+{%- if dynamic_filter -%}
+{%- set _ = modifier_blocks.append(dynamic_filter) -%}
+{%- endif -%}
+{%- set lists = mods.render_lists(context, vars) | trim -%}
+{%- if lists -%}
+{%- set _ = modifier_blocks.append(lists) -%}
+{%- endif -%}
+{%- set orderbys = mods.render_orderbys(context, vars) | trim -%}
+{%- if orderbys -%}
+{%- set _ = modifier_blocks.append(orderbys) -%}
+{%- endif -%}
+{%- set sentinel_cleanup = mods.render_sentinel_cleanup(context, vars) | trim -%}
+{%- if sentinel_cleanup -%}
+{%- set _ = modifier_blocks.append(sentinel_cleanup) -%}
+{%- endif -%}
+{%- if modifier_blocks -%}
+{{ modifier_blocks | join('\n\n') | indent(4, true) }}
+{{ '\n' }}
+{%- endif -%}
+
+    {# execute #}
+    {%+ if context.is_async %}async {% endif %}with {{ context.cursor_expr }} as {{ vars.db_cursor }}:
+        {# execute #}
+        {% set execute_func = ut.attribute(vars.db_cursor, 'execute') %}
+        {% if context.has_query_params %}
+        {{ ut.call(execute_func, [vars.query, vars.params], None, context.is_async) }}
+        {% else %}
+        {{ ut.call(execute_func, [vars.query], None, context.is_async) }}
+        {% endif %}
+        {# fetch #}
+        {% if context.command == 'exec' %}
+
+        {{ no_result() | indent(8) -}}
+        {% elif context.command in ['execrows', 'execlastid'] %}
+
+        {{ exec_result(context.command == 'execlastid') -}}
+
+        {% elif context.command == 'one' %}
+        {{ one_result() | indent(8) -}}
+        {% elif context.command == 'many' %}
+        {{ many_result() | indent(8) -}}
+        {%- endif %}
+
+    return {{ vars.result }}

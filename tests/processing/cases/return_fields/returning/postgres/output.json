@@ -1,0 +1,73 @@
+{
+  "queries": {
+    "InsertUserAndReturnID": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "users"
+        }
+      ]
+    },
+    "InsertUserAndReturnUser": {
+      "properties": [
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "users"
+        },
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "users"
+        }
+      ]
+    },
+    "UpdateUserAndReturnID": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "users"
+        }
+      ]
+    },
+    "UpdateUserAndReturnUser": {
+      "properties": [
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "users"
+        },
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "users"
+        }
+      ]
+    },
+    "DeleteUserAndReturnID": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "users"
+        }
+      ]
+    },
+    "DeleteUserAndReturnUser": {
+      "properties": [
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "users"
+        },
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "users"
+        }
+      ]
+    }
+  }
+}

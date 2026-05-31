@@ -1,0 +1,37 @@
+{
+  "queries": {
+    "StarExpansionCTE": {
+      "properties": [
+        {
+          "name": "c",
+          "datatype": "TEXT",
+          "table": "bar"
+        },
+        {
+          "name": "d",
+          "datatype": "TEXT",
+          "table": "bar"
+        }
+      ]
+    },
+    "StarExpansionTwoCTE": {
+      "properties": [
+        {
+          "name": "bar",
+          "datatype": "INT",
+          "non_column": true
+        },
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo"
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "queries": {
+    "StarExpansionJoin": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo"
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo"
+        },
+        {
+          "name": "c",
+          "datatype": "TEXT",
+          "table": "bar"
+        },
+        {
+          "name": "d",
+          "datatype": "TEXT",
+          "table": "bar"
+        }
+      ]
+    }
+  }
+}

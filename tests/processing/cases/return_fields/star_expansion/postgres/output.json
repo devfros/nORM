@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "StarExpansion": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo"
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo"
+        },
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo"
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo"
+        },
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo"
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo"
+        }
+      ]
+    },
+    "StarQuotedExpansion": {
+      "properties": [
+        {
+          "name": "a",
+          "datatype": "TEXT",
+          "table": "foo"
+        },
+        {
+          "name": "b",
+          "datatype": "TEXT",
+          "table": "foo"
+        }
+      ]
+    }
+  }
+}

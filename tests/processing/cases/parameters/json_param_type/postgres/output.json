@@ -1,0 +1,11 @@
+{
+  "queries": {
+    "FindByAddress": {
+      "parameters": {
+        "metadata": {
+          "datatype": "TEXT"
+        }
+      }
+    }
+  }
+}

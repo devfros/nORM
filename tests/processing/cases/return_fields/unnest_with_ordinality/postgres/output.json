@@ -1,0 +1,23 @@
+{
+  "queries": {
+    "GetValues": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "array_values"
+        },
+        {
+          "name": "index",
+          "datatype": "BIGINT",
+          "non_column": true
+        },
+        {
+          "name": "value",
+          "datatype": "TEXT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

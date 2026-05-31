@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "GetCitexts": {
+      "properties": [
+        {
+          "name": "bar",
+          "datatype": "citext",
+          "table": "foo"
+        },
+        {
+          "name": "bat",
+          "datatype": "citext",
+          "table": "foo"
+        }
+      ]
+    }
+  }
+}

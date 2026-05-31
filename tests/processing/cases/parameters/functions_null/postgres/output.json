@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "coalesce": {
+      "parameters": {
+        "val": {
+          "datatype": "INT"
+        }
+      }
+    },
+    "nullif": {
+      "parameters": {
+        "val": {
+          "datatype": "INT"
+        }
+      }
+    }
+  }
+}

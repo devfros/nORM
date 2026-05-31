@@ -1,0 +1,23 @@
+{
+  "queries": {
+    "ListFoo": {
+      "properties": [
+        {
+          "name": "qualified_name",
+          "datatype": "ltree",
+          "table": "foo"
+        },
+        {
+          "name": "name_query",
+          "datatype": "lquery",
+          "table": "foo"
+        },
+        {
+          "name": "fts_name_query",
+          "datatype": "ltxtquery",
+          "table": "foo"
+        }
+      ]
+    }
+  }
+}

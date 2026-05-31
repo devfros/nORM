@@ -1,0 +1,9 @@
+{
+  "queries": {
+    "main": {
+      "error": {
+        "code": "CONFLICTING_CONSTRAINTS"
+      }
+    }
+  }
+}

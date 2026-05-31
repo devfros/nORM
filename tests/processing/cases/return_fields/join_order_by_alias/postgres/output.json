@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "ColumnAsOrderBy": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "TEXT",
+          "table": "foo",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

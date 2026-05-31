@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "aliased_column": {
+      "properties": [
+        {
+          "name": "author_name",
+          "datatype": "TEXT",
+          "table": "authors"
+        }
+      ]
+    },
+    "duplicate_projections": {
+      "properties": [
+        {
+          "name": "id",
+          "table": "authors"
+        },
+        {
+          "name": "id",
+          "table": "books"
+        }
+      ]
+    },
+    "qualified_column": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        }
+      ]
+    },
+    "unqualified_single_table": {
+      "properties": [
+        {
+          "name": "id",
+          "table": "authors",
+          "datatype": "SERIAL"
+        }
+      ]
+    },
+    "unqualified_unique_multitable": {
+      "properties": [
+        {
+          "name": "title",
+          "datatype": "TEXT",
+          "table": "books"
+        }
+      ]
+    }
+  }
+}

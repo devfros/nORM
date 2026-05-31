@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "Math": {
+      "properties": [
+        {
+          "name": "num",
+          "datatype": "INT",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "division",
+          "datatype": "BIGINT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

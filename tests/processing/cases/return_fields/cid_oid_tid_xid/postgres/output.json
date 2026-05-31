@@ -1,0 +1,48 @@
+{
+  "queries": {
+    "SelectTest": {
+      "properties": [
+        {
+          "name": "v_cid_null",
+          "datatype": "cid",
+          "table": "test_table"
+        },
+        {
+          "name": "v_oid_null",
+          "datatype": "OID",
+          "table": "test_table"
+        },
+        {
+          "name": "v_tid_null",
+          "datatype": "tid",
+          "table": "test_table"
+        },
+        {
+          "name": "v_xid_null",
+          "datatype": "xid",
+          "table": "test_table"
+        },
+        {
+          "name": "v_cid",
+          "datatype": "cid",
+          "table": "test_table"
+        },
+        {
+          "name": "v_oid",
+          "datatype": "OID",
+          "table": "test_table"
+        },
+        {
+          "name": "v_tid",
+          "datatype": "tid",
+          "table": "test_table"
+        },
+        {
+          "name": "v_xid",
+          "datatype": "xid",
+          "table": "test_table"
+        }
+      ]
+    }
+  }
+}

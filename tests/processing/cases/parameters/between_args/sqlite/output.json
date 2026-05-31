@@ -1,0 +1,46 @@
+{
+  "queries": {
+    "GetBetweenPrices": {
+      "parameters": {
+        "low": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        },
+        "high": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        }
+      }
+    },
+    "GetBetweenPricesTable": {
+      "parameters": {
+        "low": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        },
+        "high": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        }
+      }
+    },
+    "GetBetweenPricesTableAlias": {
+      "parameters": {
+        "low": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        },
+        "high": {
+          "datatype": "INT",
+          "nullable": false,
+          "optional": false
+        }
+      }
+    }
+  }
+}

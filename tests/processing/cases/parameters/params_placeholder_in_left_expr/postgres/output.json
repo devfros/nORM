@@ -1,0 +1,24 @@
+{
+  "queries": {
+    "FindByID": {
+      "parameters": {
+        "id": {
+          "datatype": "INT",
+          "nullable": false
+        }
+      }
+    },
+    "FindByIDAndName": {
+      "parameters": {
+        "id": {
+          "datatype": "INT",
+          "nullable": false
+        },
+        "name": {
+          "datatype": "VARCHAR(255)",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

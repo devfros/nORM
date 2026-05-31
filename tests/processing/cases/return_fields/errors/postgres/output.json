@@ -1,0 +1,54 @@
+{
+  "queries": {
+    "ambiguous_column_authors_books_id": {
+      "error": {
+        "code": "AMBIGUOUS_COLUMN"
+      }
+    },
+    "ambiguous_column_self_join_id": {
+      "error": {
+        "code": "AMBIGUOUS_COLUMN"
+      }
+    },
+    "ambiguous_column_update_returning_unqualified_id": {
+      "error": {
+        "code": "AMBIGUOUS_COLUMN"
+      }
+    },
+    "multiple_issues_error_precedence_unknown_alias_first": {
+      "error": {
+        "code": "AMBIGUOUS_COLUMN"
+      }
+    },
+    "unknown_column_qualified": {
+      "error": {
+        "code": "AMBIGUOUS_COLUMN"
+      }
+    },
+    "unknown_column_unqualified": {
+      "error": {
+        "code": "AMBIGUOUS_COLUMN"
+      }
+    },
+    "unknown_table_alias_column_ref": {
+      "error": {
+        "code": "AMBIGUOUS_COLUMN"
+      }
+    },
+    "unknown_table_alias_table_wildcard": {
+      "error": {
+        "code": "UNKNOWN_TABLE"
+      }
+    },
+    "unknown_table_alias_update_returning_from_alias": {
+      "error": {
+        "code": "AMBIGUOUS_COLUMN"
+      }
+    },
+    "unknown_table_qualified_ref": {
+      "error": {
+        "code": "AMBIGUOUS_COLUMN"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "GetDate": {
+      "properties": [
+        {
+          "name": "now",
+          "datatype": "TIMESTAMPTZ",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "queries": {
+    "distinct_columns": {
+      "properties": [
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors"
+        },
+        {
+          "name": "rating",
+          "datatype": "INT",
+          "table": "authors"
+        }
+      ]
+    },
+    "distinct_expression_mix": {
+      "properties": [
+        {
+          "name": "id",
+          "table": "authors"
+        },
+        {
+          "name": "lower_name",
+          "datatype": "VARCHAR",
+          "non_column": true
+        }
+      ]
+    },
+    "distinct_on_alias": {
+      "properties": [
+        {
+          "name": "author_id",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "table": "authors"
+        }
+      ]
+    }
+  }
+}

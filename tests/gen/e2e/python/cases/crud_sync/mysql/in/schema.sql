@@ -1,0 +1,17 @@
+CREATE TABLE authors (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name TEXT NOT NULL,
+    rating INT
+);
+
+CREATE TABLE books (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    author_id INT NOT NULL,
+    isbn VARCHAR(255) NOT NULL DEFAULT '' UNIQUE,
+    book_type VARCHAR(50) NOT NULL DEFAULT 'FICTION',
+    title TEXT NOT NULL,
+    year INT NOT NULL DEFAULT 2000,
+    available TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    tags JSON NOT NULL,
+    FOREIGN KEY (author_id) REFERENCES authors(id)
+);

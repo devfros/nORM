@@ -1,0 +1,67 @@
+{
+  "queries": {
+    "exists_correlated_flag": {
+      "properties": [
+        {
+          "name": "has_books",
+          "datatype": "BOOLEAN",
+          "non_column": true
+        }
+      ]
+    },
+    "from_derived_table": {
+      "properties": [
+        {
+          "name": "author_id",
+          "datatype": "INT",
+          "table": "books"
+        }
+      ]
+    },
+    "in_subquery_flag": {
+      "properties": [
+        {
+          "name": "has_books",
+          "datatype": "BOOLEAN",
+          "non_column": true
+        }
+      ]
+    },
+    "nested_correlated_exists": {
+      "properties": [
+        {
+          "name": "deeply_has_books",
+          "datatype": "BOOLEAN",
+          "non_column": true
+        }
+      ]
+    },
+    "not_in_subquery_flag": {
+      "properties": [
+        {
+          "name": "has_no_books",
+          "datatype": "BOOLEAN",
+          "non_column": true
+        }
+      ]
+    },
+    "scalar_correlated_count": {
+      "properties": [
+        {
+          "name": "book_count",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    },
+    "scalar_uncorrelated": {
+      "properties": [
+        {
+          "name": "total_books",
+          "datatype": "BIGINT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

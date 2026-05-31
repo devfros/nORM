@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "GetAuthor": {
+      "properties": [
+        {
+          "name": "total",
+          "datatype": "BIGINT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

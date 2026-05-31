@@ -1,0 +1,27 @@
+{
+  "queries": {
+    "comments_whitespace": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors"
+        }
+      ]
+    },
+    "placeholders_expression": {
+      "properties": [
+        {
+          "name": "above_min",
+          "datatype": "BOOLEAN",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

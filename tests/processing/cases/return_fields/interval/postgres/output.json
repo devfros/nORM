@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "Get": {
+      "properties": [
+        {
+          "name": "bar",
+          "datatype": "BOOLEAN",
+          "table": "foo",
+          "non_column": false
+        },
+        {
+          "name": "interval",
+          "datatype": "INTERVAL",
+          "table": "foo",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

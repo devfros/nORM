@@ -1,0 +1,13 @@
+{
+  "queries": {
+    "main": {
+      "properties": [
+        {
+          "name": "one",
+          "datatype": "INT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

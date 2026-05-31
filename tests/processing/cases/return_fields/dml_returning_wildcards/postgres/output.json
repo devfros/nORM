@@ -1,0 +1,42 @@
+{
+  "queries": {
+    "insert_returning_star": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors"
+        },
+        {
+          "name": "rating",
+          "datatype": "INT",
+          "table": "authors"
+        }
+      ]
+    },
+    "update_returning_table_wildcard": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "authors"
+        },
+        {
+          "name": "rating",
+          "datatype": "INT",
+          "table": "authors"
+        }
+      ]
+    }
+  }
+}

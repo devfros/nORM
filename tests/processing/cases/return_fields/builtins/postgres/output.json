@@ -1,0 +1,244 @@
+{
+  "queries": {
+    "Abs": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Cbrt": {
+      "properties": [
+        {
+          "name": "27.0",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Ceil": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Ceiling": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Degrees": {
+      "properties": [
+        {
+          "name": "0.5",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Div": {
+      "properties": [
+        {
+          "name": "9",
+          "datatype": "DECIMAL",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Exp": {
+      "properties": [
+        {
+          "name": "1.0",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Floor": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Ln": {
+      "properties": [
+        {
+          "name": "2.0",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Log": {
+      "properties": [
+        {
+          "name": "100.0",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Logs": {
+      "properties": [
+        {
+          "name": "2.0",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Mod": {
+      "properties": [
+        {
+          "name": "9",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Pi": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Power": {
+      "properties": [
+        {
+          "name": "9.0",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Radians": {
+      "properties": [
+        {
+          "name": "45.0",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Round": {
+      "properties": [
+        {
+          "name": "42.4",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Rounds": {
+      "properties": [
+        {
+          "name": "42.4382",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Scale": {
+      "properties": [
+        {
+          "name": "scale",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Sign": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Sqrt": {
+      "properties": [
+        {
+          "name": "2.0",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Trunc": {
+      "properties": [
+        {
+          "name": "42.8",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "Truncs": {
+      "properties": [
+        {
+          "name": "42.4382",
+          "datatype": "DOUBLE",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "WidthBucketNumerics": {
+      "properties": [
+        {
+          "name": "5.35",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "WidthBucketTimestamps": {
+      "properties": [
+        {
+          "name": "column_0",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

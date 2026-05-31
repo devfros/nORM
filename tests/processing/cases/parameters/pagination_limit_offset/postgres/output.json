@@ -1,0 +1,14 @@
+{
+  "queries": {
+    "main": {
+      "parameters": {
+        "limit": {
+          "datatype": "INT"
+        },
+        "offset": {
+          "datatype": "INT"
+        }
+      }
+    }
+  }
+}

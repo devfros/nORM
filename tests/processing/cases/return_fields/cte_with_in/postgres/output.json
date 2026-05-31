@@ -1,0 +1,84 @@
+{
+  "queries": {
+    "GetAll": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "L",
+          "non_column": false
+        },
+        {
+          "name": "parent_id",
+          "datatype": "INT",
+          "table": "L",
+          "non_column": false
+        }
+      ]
+    },
+    "GetAll1": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "l_id",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "F",
+          "datatype": "VARCHAR(256)",
+          "table": "T",
+          "non_column": false
+        }
+      ]
+    },
+    "GetAll2": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "l_id",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "F",
+          "datatype": "VARCHAR(256)",
+          "table": "T",
+          "non_column": false
+        }
+      ]
+    },
+    "GetAll4": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "T",
+          "non_column": false
+        }
+      ]
+    },
+    "GetAll3": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "T",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

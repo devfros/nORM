@@ -1,0 +1,176 @@
+{
+  "queries": {
+    "cte_wildcard": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT"
+        }
+      ]
+    },
+    "mixed_wildcard_explicit": {
+      "properties": [
+        {
+          "name": "id",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "table": "authors"
+        },
+        {
+          "name": "rating",
+          "table": "authors"
+        },
+        {
+          "name": "title",
+          "table": "books"
+        }
+      ]
+    },
+    "nested_cte_wildcard": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT"
+        },
+        {
+          "name": "rating",
+          "datatype": "INT"
+        }
+      ]
+    },
+    "star_single_table": {
+      "properties": [
+        {
+          "name": "id",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "table": "authors"
+        },
+        {
+          "name": "rating",
+          "table": "authors"
+        }
+      ]
+    },
+    "star_with_join": {
+      "properties": [
+        {
+          "name": "id",
+          "table": "authors"
+        },
+        {
+          "name": "name",
+          "table": "authors"
+        },
+        {
+          "name": "rating",
+          "table": "authors"
+        },
+        {
+          "name": "id",
+          "table": "books"
+        },
+        {
+          "name": "author_id",
+          "table": "books"
+        },
+        {
+          "name": "isbn",
+          "table": "books"
+        },
+        {
+          "name": "book_type",
+          "table": "books"
+        },
+        {
+          "name": "title",
+          "table": "books"
+        },
+        {
+          "name": "year",
+          "table": "books"
+        },
+        {
+          "name": "available",
+          "table": "books"
+        },
+        {
+          "name": "tags",
+          "table": "books"
+        }
+      ]
+    },
+    "subquery_wildcard": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL"
+        },
+        {
+          "name": "title",
+          "datatype": "TEXT"
+        }
+      ]
+    },
+    "table_wildcard": {
+      "properties": [
+        {
+          "name": "id",
+          "table": "books"
+        },
+        {
+          "name": "author_id",
+          "table": "books"
+        },
+        {
+          "name": "isbn",
+          "table": "books"
+        },
+        {
+          "name": "book_type",
+          "table": "books"
+        },
+        {
+          "name": "title",
+          "table": "books"
+        },
+        {
+          "name": "year",
+          "table": "books"
+        },
+        {
+          "name": "available",
+          "table": "books"
+        },
+        {
+          "name": "tags",
+          "table": "books"
+        }
+      ]
+    },
+    "union_wildcard": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT"
+        }
+      ]
+    }
+  }
+}

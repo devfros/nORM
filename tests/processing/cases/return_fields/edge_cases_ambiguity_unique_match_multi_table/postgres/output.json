@@ -1,0 +1,13 @@
+{
+  "queries": {
+    "main": {
+      "properties": [
+        {
+          "name": "rating",
+          "table": "authors",
+          "datatype": "INT"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "queries": {
+    "SelectTest": {
+      "properties": [
+        {
+          "name": "v_bit_null",
+          "datatype": "BIT(3)",
+          "table": "test_table"
+        },
+        {
+          "name": "v_varbit_null",
+          "datatype": "varbit(3)",
+          "table": "test_table"
+        },
+        {
+          "name": "v_bit",
+          "datatype": "BIT(3)",
+          "table": "test_table"
+        },
+        {
+          "name": "v_varbit",
+          "datatype": "varbit(3)",
+          "table": "test_table"
+        }
+      ]
+    }
+  }
+}

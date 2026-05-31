@@ -1,0 +1,20 @@
+{
+  "queries": {
+    "CTERecursive": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "parent_id",
+          "datatype": "INT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

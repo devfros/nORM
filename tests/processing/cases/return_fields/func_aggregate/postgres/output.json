@@ -1,0 +1,13 @@
+{
+  "queries": {
+    "Percentile": {
+      "properties": [
+        {
+          "name": "percentile_disc",
+          "datatype": "TEXT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

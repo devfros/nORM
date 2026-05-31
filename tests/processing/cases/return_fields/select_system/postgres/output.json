@@ -1,0 +1,38 @@
+{
+  "queries": {
+    "GetSystemColumns": {
+      "properties": [
+        {
+          "name": "tableoid",
+          "datatype": "OID",
+          "table": "test"
+        },
+        {
+          "name": "xmin",
+          "datatype": "xid",
+          "table": "test"
+        },
+        {
+          "name": "cmin",
+          "datatype": "cid",
+          "table": "test"
+        },
+        {
+          "name": "xmax",
+          "datatype": "xid",
+          "table": "test"
+        },
+        {
+          "name": "cmax",
+          "datatype": "cid",
+          "table": "test"
+        },
+        {
+          "name": "ctid",
+          "datatype": "tid",
+          "table": "test"
+        }
+      ]
+    }
+  }
+}

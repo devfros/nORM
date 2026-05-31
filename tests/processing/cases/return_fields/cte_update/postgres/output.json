@@ -1,0 +1,23 @@
+{
+  "queries": {
+    "UpdateAttribute": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "attribute_value"
+        },
+        {
+          "name": "val",
+          "datatype": "TEXT",
+          "table": "attribute_value"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "attribute"
+        }
+      ]
+    }
+  }
+}

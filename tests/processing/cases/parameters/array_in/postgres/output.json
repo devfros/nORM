@@ -1,0 +1,16 @@
+{
+  "queries": {
+    "In": {
+      "parameters": {
+        "id_1": {
+          "datatype": "SERIAL",
+          "nullable": false
+        },
+        "id_2": {
+          "datatype": "SERIAL",
+          "nullable": false
+        }
+      }
+    }
+  }
+}

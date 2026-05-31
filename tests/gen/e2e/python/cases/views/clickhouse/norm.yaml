@@ -1,0 +1,16 @@
+version: "1"
+
+targets:
+  - name: default
+
+    sql:
+      engine: clickhouse
+      db_schema: ./in/schema.sql
+      repositories: ./in/repos
+
+    gen:
+      out: ./out
+      python:
+        asynchronous: false
+        models: pydantic
+        max_params: 10

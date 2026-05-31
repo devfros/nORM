@@ -1,0 +1,24 @@
+{
+  "queries": {
+    "GetLatestVersion": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "GetLatestVersionWithSubquery": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "BIGSERIAL",
+          "table": "versions",
+          "non_column": false
+        }
+      ]
+    }
+  }
+}

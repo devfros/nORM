@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "GetTransaction": {
+      "properties": [
+        {
+          "name": "jsonb_extract_path",
+          "datatype": "JSONB",
+          "non_column": true
+        },
+        {
+          "name": "jsonb_agg",
+          "datatype": "JSONB",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "GetActionCodeByResource": {
+      "properties": [
+        {
+          "name": "code",
+          "datatype": "VARCHAR(20)",
+          "table": "sys_actions"
+        },
+        {
+          "name": "resource_code",
+          "datatype": "TEXT",
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

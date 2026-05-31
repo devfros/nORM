@@ -1,0 +1,26 @@
+{
+  "queries": {
+    "ActivityStats": {
+      "properties": [
+        {
+          "name": "numofactivities",
+          "datatype": "BIGINT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "mindate",
+          "datatype": "TIMESTAMPTZ",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "maxdate",
+          "datatype": "TIMESTAMPTZ",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

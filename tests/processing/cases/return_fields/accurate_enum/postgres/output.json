@@ -1,0 +1,61 @@
+{
+  "queries": {
+    "ListTasks": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "tasks"
+        },
+        {
+          "name": "title",
+          "datatype": "TEXT",
+          "table": "tasks"
+        },
+        {
+          "name": "status",
+          "datatype": "status",
+          "table": "tasks"
+        }
+      ]
+    },
+    "GetTasksByStatus": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "tasks"
+        },
+        {
+          "name": "title",
+          "datatype": "TEXT",
+          "table": "tasks"
+        },
+        {
+          "name": "status",
+          "datatype": "status",
+          "table": "tasks"
+        }
+      ]
+    },
+    "CreateTask": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL",
+          "table": "tasks"
+        },
+        {
+          "name": "title",
+          "datatype": "TEXT",
+          "table": "tasks"
+        },
+        {
+          "name": "status",
+          "datatype": "status",
+          "table": "tasks"
+        }
+      ]
+    }
+  }
+}

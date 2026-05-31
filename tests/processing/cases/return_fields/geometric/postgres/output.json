@@ -1,0 +1,78 @@
+{
+  "queries": {
+    "SelectTest": {
+      "properties": [
+        {
+          "name": "v_box_null",
+          "datatype": "box",
+          "table": "test_table"
+        },
+        {
+          "name": "v_circle_null",
+          "datatype": "circle",
+          "table": "test_table"
+        },
+        {
+          "name": "v_line_null",
+          "datatype": "line",
+          "table": "test_table"
+        },
+        {
+          "name": "v_lseg_null",
+          "datatype": "lseg",
+          "table": "test_table"
+        },
+        {
+          "name": "v_path_null",
+          "datatype": "path",
+          "table": "test_table"
+        },
+        {
+          "name": "v_point_null",
+          "datatype": "POINT",
+          "table": "test_table"
+        },
+        {
+          "name": "v_polygon_null",
+          "datatype": "polygon",
+          "table": "test_table"
+        },
+        {
+          "name": "v_box",
+          "datatype": "box",
+          "table": "test_table"
+        },
+        {
+          "name": "v_circle",
+          "datatype": "circle",
+          "table": "test_table"
+        },
+        {
+          "name": "v_line",
+          "datatype": "line",
+          "table": "test_table"
+        },
+        {
+          "name": "v_lseg",
+          "datatype": "lseg",
+          "table": "test_table"
+        },
+        {
+          "name": "v_path",
+          "datatype": "path",
+          "table": "test_table"
+        },
+        {
+          "name": "v_point",
+          "datatype": "POINT",
+          "table": "test_table"
+        },
+        {
+          "name": "v_polygon",
+          "datatype": "polygon",
+          "table": "test_table"
+        }
+      ]
+    }
+  }
+}

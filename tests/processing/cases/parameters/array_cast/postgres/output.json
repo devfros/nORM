@@ -1,0 +1,25 @@
+{
+  "queries": {
+    "array_int": {
+      "parameters": {
+        "ids": {
+          "datatype": "ARRAY<INT>"
+        }
+      }
+    },
+    "array_shorthand": {
+      "parameters": {
+        "tags": {
+          "datatype": "ARRAY<TEXT>"
+        }
+      }
+    },
+    "array_varchar": {
+      "parameters": {
+        "tags": {
+          "datatype": "ARRAY<VARCHAR>"
+        }
+      }
+    }
+  }
+}

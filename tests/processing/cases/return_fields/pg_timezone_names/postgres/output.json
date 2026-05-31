@@ -1,0 +1,54 @@
+{
+  "queries": {
+    "GetTimezones": {
+      "properties": [
+        {
+          "name": "name",
+          "datatype": "TEXT",
+          "table": "pg_timezone_names"
+        },
+        {
+          "name": "abbrev",
+          "datatype": "TEXT",
+          "table": "pg_timezone_names"
+        },
+        {
+          "name": "utc_offset",
+          "datatype": "INTERVAL",
+          "table": "pg_timezone_names"
+        },
+        {
+          "name": "is_dst",
+          "datatype": "BOOLEAN",
+          "table": "pg_timezone_names"
+        }
+      ]
+    },
+    "GetTables": {
+      "properties": [
+        {
+          "name": "table_name",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    },
+    "GetColumns": {
+      "properties": [
+        {
+          "name": "table_name",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        },
+        {
+          "name": "column_name",
+          "datatype": "TEXT",
+          "table": null,
+          "non_column": true
+        }
+      ]
+    }
+  }
+}

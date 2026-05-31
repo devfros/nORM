@@ -1,0 +1,32 @@
+{
+  "queries": {
+    "ListExpensiveProducts": {
+      "properties": [
+        {
+          "name": "id",
+          "datatype": "SERIAL"
+        },
+        {
+          "name": "name",
+          "datatype": "TEXT"
+        },
+        {
+          "name": "price",
+          "datatype": "DECIMAL(10, 2)"
+        }
+      ]
+    },
+    "GetProductStats": {
+      "properties": [
+        {
+          "name": "total",
+          "datatype": "BIGINT"
+        },
+        {
+          "name": "avg_price",
+          "datatype": "DOUBLE"
+        }
+      ]
+    }
+  }
+}
