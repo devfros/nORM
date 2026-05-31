@@ -10,7 +10,7 @@ One tool for your database schema, queries, and typed data-layer code.
 [![Python](https://img.shields.io/pypi/pyversions/norm-cli)](https://pypi.org/project/norm-cli/)
 [![License](https://img.shields.io/github/license/devfros/nORM)](LICENSE)
 
-[Documentation](https://devfros.github.io/norm) · [Python tutorial](https://devfros.github.io/norm/tutorials/python) · [GitHub](https://github.com/devfros/norm)
+[Documentation](https://devfros.github.io/nORM) · [Python tutorial](https://devfros.github.io/nORM/tutorials/python) · [GitHub](https://github.com/devfros/norm)
 
 </div>
 
@@ -53,7 +53,7 @@ async with get_db() as db:
     users = await repo.list_users()         # list[User]
 ```
 
-Run `norm init` and `norm generate` to produce `norm_out/` with Pydantic models and async repository methods. The same SQL inputs will drive other language targets as they land. See the [Python tutorial](https://devfros.github.io/norm/tutorials/python) for config, CRUD, and project layout.
+Run `norm init` and `norm generate` to produce `norm_out/` with Pydantic models and async repository methods. The same SQL inputs will drive other language targets as they land. See the [Python tutorial](https://devfros.github.io/nORM/tutorials/python) for config, CRUD, and project layout.
 
 ## Why nORM?
 
@@ -78,7 +78,7 @@ await repo.search_authors(rating=4)
 await repo.search_authors(rating=4, id=7)
 ```
 
-[Dynamic filtering guide](https://devfros.github.io/norm/guides/dynamic_filtering) · [Dynamic sorting](https://devfros.github.io/norm/guides/dynamic_sorting) · [Partial updates](https://devfros.github.io/norm/guides/partial_update) · [Embedding models](https://devfros.github.io/norm/guides/embedding_models)
+[Dynamic filtering guide](https://devfros.github.io/nORM/guides/dynamic_filtering) · [Dynamic sorting](https://devfros.github.io/nORM/guides/dynamic_sorting) · [Partial updates](https://devfros.github.io/nORM/guides/partial_update) · [Embedding models](https://devfros.github.io/nORM/guides/embedding_models)
 
 ## Who this is for
 
@@ -105,7 +105,7 @@ norm init
 norm generate
 ```
 
-Other useful commands: `norm schema pull` (introspect Postgres), `norm check` (CI-friendly validation). See [commands](https://devfros.github.io/norm/commands/check). [Migrations](https://devfros.github.io/norm/commands/migrations) are planned.
+Other useful commands: `norm schema pull` (introspect Postgres), `norm check` (CI-friendly validation). See [commands](https://devfros.github.io/nORM/commands/check). [Migrations](https://devfros.github.io/nORM/commands/migrations) are planned.
 
 ## Language & database support
 
@@ -116,7 +116,7 @@ nORM is language-agnostic at the core: the same schema and repository SQL feed e
 | Python               | Available     | Postgres, SQLite, MySQL, ClickHouse, DuckDB |
 | Rust, Go, TypeScript | In progress   | TBD per target                              |
 
-[Full support matrix](https://devfros.github.io/norm/reference/db_and_lang_support)
+[Full support matrix](https://devfros.github.io/nORM/reference/db_and_lang_support)
 
 ## Contributing
 

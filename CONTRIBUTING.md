@@ -5,7 +5,7 @@ Thanks for your interest in nORM. This document covers local development and doc
 ## Repository
 
 - **GitHub:** https://github.com/devfros/norm
-- **Docs site:** https://devfros.github.io/norm
+- **Docs site:** https://devfros.github.io/nORM
 
 ## Development setup
 

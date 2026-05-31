@@ -54,7 +54,7 @@ First public release. nORM is a SQL-first code generator for typed data access w
 
 #### Documentation and distribution
 
-- Project website and docs at [devfros.github.io/norm](https://devfros.github.io/norm).
+- Project website and docs at [devfros.github.io/nORM](https://devfros.github.io/nORM).
 - MIT license.
 - PyPI package **`norm-cli`** (`pipx/pip install norm-cli`); CLI command **`norm`**. Python 3.12–3.14.
 
