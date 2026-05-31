@@ -1,5 +1,5 @@
 [project]
-name = "norm"
+name = "norm-cli"
 version = "0.1.0"
 description = "Replace ORM complexity with SQL-first codegen"
 readme = "README.md"
@@ -45,9 +45,9 @@ dependencies = [
 [project.urls]
 Homepage = "https://devfros.github.io/norm"
 Documentation = "https://devfros.github.io/norm"
-Repository = "https://github.com/devfros/norm"
-Issues = "https://github.com/devfros/norm/issues"
-Changelog = "https://github.com/devfros/norm/blob/main/CHANGELOG.md"
+Repository = "https://github.com/devfros/nORM"
+Issues = "https://github.com/devfros/nORM/issues"
+Changelog = "https://github.com/devfros/nORM/blob/main/CHANGELOG.md"
 
 [project.scripts]
 norm = "norm.cli.main:main"
@@ -58,6 +58,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 package-mode = true
+packages = [{ include = "norm" }]
 
 [tool.poetry.group.dev]
 optional = true
