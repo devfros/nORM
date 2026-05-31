@@ -7,6 +7,8 @@ and this project follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+--
+
 ## [0.1.0] - 2026-06-01
 
 First public release. nORM is a SQL-first code generator for typed data access without ORM complexity - inspired by [sqlc](https://github.com/sqlc-dev/sqlc), with extra support for runtime query composition.
@@ -54,9 +56,12 @@ First public release. nORM is a SQL-first code generator for typed data access w
 
 - Project website and docs at [devfros.github.io/norm](https://devfros.github.io/norm).
 - MIT license.
-- PyPI package **`norm-cli`** (`pipx/pip install norm-cli`); CLI command **`norm`**. Python 3.11–3.14.
+- PyPI package **`norm-cli`** (`pipx/pip install norm-cli`); CLI command **`norm`**. Python 3.12–3.14.
 
 #### In progress (included in repo, not yet production-ready)
 
 - Go, Rust, and TypeScript code generators.
 - `norm migrations` command group.
+
+[Unreleased]: https://github.com/devfros/nORM/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/devfros/nORM/releases/tag/v0.1.0
