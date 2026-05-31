@@ -74,7 +74,7 @@ mysqlclient = "^2.2.7"
 duckdb = "^1.2.2"
 aioduck = "^2025.9.1"
 clickhouse-driver = "^0.2.9"
-asynch = "==0.3.0"
+asynch = "==0.3.1"
 
 [tool.pytest.ini_options]
 addopts = ["--import-mode=importlib"]
