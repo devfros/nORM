@@ -64,7 +64,7 @@ packages = [{ include = "norm" }]
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^9.0.2"
+pytest = "^9.0.3"
 ruff = "^0.11.11"
 pydantic = "^2.12.5"
 psycopg = { version = "^3.2", extras = ["binary"] }
