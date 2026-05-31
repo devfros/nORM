@@ -43,8 +43,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://devfros.github.io/norm"
-Documentation = "https://devfros.github.io/norm"
+Homepage = "https://devfros.github.io/nORM"
+Documentation = "https://devfros.github.io/nORM"
 Repository = "https://github.com/devfros/nORM"
 Issues = "https://github.com/devfros/nORM/issues"
 Changelog = "https://github.com/devfros/nORM/blob/main/CHANGELOG.md"
