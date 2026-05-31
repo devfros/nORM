@@ -23,7 +23,6 @@ def optimize_query(
     *,
     db_schema: DBSchema | None = None,
 ) -> exp.Expr:
-
     rules: tuple = RULES
     if db_schema is not None:
         bound_infer_types = partial(infer_types, db_schema=db_schema)

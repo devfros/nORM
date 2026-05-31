@@ -159,7 +159,7 @@ class SqlConfig:
             try:
                 db_schema = _validate_path_like(db_schema_value, "db_schema")
                 if db_schema.endswith(("/", "\\")):
-                    raise ValueError("'db_schema' must point to a file path")
+                    raise ValueError("'db_schema' must point to a file path")  # noqa: TRY301
             except ValueError as err:
                 _add_issue(issues, (*loc, "db_schema"), str(err))
 

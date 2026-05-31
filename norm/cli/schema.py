@@ -90,7 +90,7 @@ def pull_db_schema(sql_config: SqlConfig) -> str:
     ]
 
     try:
-        output = subprocess.run(
+        output = subprocess.run(  # noqa: S603
             pg_dump_command,
             check=True,
             text=True,

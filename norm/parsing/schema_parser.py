@@ -300,7 +300,9 @@ def _catalog_and_name(parts: list[str], default_catalog: str) -> tuple[str, str]
     return default_catalog, parts[-1]
 
 
-def _table_from_create_def(create_def: exp.Create) -> tuple[exp.Table | None, list[str]]:
+def _table_from_create_def(
+    create_def: exp.Create,
+) -> tuple[exp.Table | None, list[str]]:
     from norm.parsing.ddl import _table_from_create_this
 
     return _table_from_create_this(create_def.this)

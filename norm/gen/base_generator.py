@@ -10,11 +10,11 @@ from norm.schemas.repo import Repo
 
 from .dialect_profile import DialectProfile
 
-T = TypeVar("DialectProfileType", bound=DialectProfile)
+DialectProfileType = TypeVar("DialectProfileType", bound=DialectProfile)
 
 
 class BaseGenerator(ABC):
-    dialect_profile: T
+    dialect_profile: DialectProfileType
 
     def __init__(self, config: GenConfig, dialect: Dialects):
         self.config = config

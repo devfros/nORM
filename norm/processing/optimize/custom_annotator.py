@@ -173,7 +173,7 @@ class CustomTypeAnnotator(TypeAnnotator):
         expression_id = id(expression)
 
         dtype = target_type or exp.DType.UNKNOWN
-        expression._type = (
+        expression._type = (  # noqa: SLF001
             dtype if isinstance(dtype, exp.DataType) else dtype.into_expr()
         )
         self._visited.add(expression_id)

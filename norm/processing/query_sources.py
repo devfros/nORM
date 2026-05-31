@@ -1,7 +1,11 @@
 from __future__ import annotations
 
+from typing import TYPE_CHECKING
+
 from sqlglot import exp
-from sqlglot.optimizer.scope import Scope
+
+if TYPE_CHECKING:
+    from sqlglot.optimizer.scope import Scope
 
 
 def unwrap_expression(expression: exp.Expr) -> exp.Expr:

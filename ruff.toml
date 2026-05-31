@@ -31,12 +31,13 @@ exclude = [
   "test_*.py",      # ← exclude test files anywhere
   "**/output.py",
   "temp",
-  "**/e2e/*/cases/*/*/out",
-  "**/e2e/*/cases/**/runtime",
+  "tests",
 ]
 lint.select = ["ALL"]
 lint.ignore = [
+  "PLR2004",
   "Q000",
+  "ANN202",
   "FIX004",
   "TRY300",
   "SIM110",

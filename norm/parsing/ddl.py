@@ -298,6 +298,7 @@ class DdlModelBuilder:
             kind=FunctionKind.FUNCTION,
         )
 
+
 def _table_from_create_this(
     this: exp.Expr | None,
 ) -> tuple[exp.Table | None, list[str]]:
@@ -347,7 +348,11 @@ def _clickhouse_signature_from_expression(
     if expression is None:
         return {}, None
 
-    lambda_expr = expression if isinstance(expression, exp.Lambda) else expression.find(exp.Lambda)
+    lambda_expr = (
+        expression
+        if isinstance(expression, exp.Lambda)
+        else expression.find(exp.Lambda)
+    )
     if isinstance(lambda_expr, exp.Lambda):
         return _parameters_from_clickhouse_lambda(lambda_expr), None
 
@@ -357,7 +362,9 @@ def _clickhouse_signature_from_expression(
         else expression.find(exp.JSONExtract)
     )
     if isinstance(json_extract, exp.JSONExtract):
-        parameters = _parameters_from_clickhouse_tuple(json_extract.this, dialect=dialect)
+        parameters = _parameters_from_clickhouse_tuple(
+            json_extract.this, dialect=dialect
+        )
         return parameters, _return_type_from_clickhouse_json_extract(json_extract)
 
     return {}, None
@@ -393,9 +400,7 @@ def _parameters_from_clickhouse_tuple(
     for item in node.expressions or []:
         if isinstance(item, exp.Alias) and isinstance(item.this, exp.Column):
             datatype = (
-                exp.DataType.build(item.alias)
-                if item.alias
-                else _TYPELESS_COLUMN_TYPE
+                exp.DataType.build(item.alias) if item.alias else _TYPELESS_COLUMN_TYPE
             )
             parameters[item.this.name] = FieldDefinition(
                 name=item.this.name,
