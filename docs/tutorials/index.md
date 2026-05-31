@@ -1,6 +1,7 @@
 ---
 title: Quickstart
 layout: home
+pageClass: tutorials-quickstart
 
 hero:
   text: Choose a language and start building

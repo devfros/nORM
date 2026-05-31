@@ -36,6 +36,16 @@
   padding: 18px;
 }
 
+.tutorials-quickstart .VPHomeFeatures .item:not(:first-child) {
+  opacity: 0.5;
+  filter: grayscale(0.35);
+}
+
+.tutorials-quickstart .VPHomeFeatures .item:not(:first-child):hover {
+  opacity: 0.72;
+  filter: grayscale(0.15);
+}
+
 /* used in reference/default-theme-search */
 img[src='/search.png'] {
   width: 100%;
