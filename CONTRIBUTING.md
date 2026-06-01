@@ -4,7 +4,7 @@ Thanks for your interest in nORM. This document covers local development and doc
 
 ## Repository
 
-- **GitHub:** https://github.com/devfros/norm
+- **GitHub:** https://github.com/devfros/nORM
 - **Docs site:** https://devfros.github.io/nORM
 
 ## Development setup
@@ -12,7 +12,7 @@ Thanks for your interest in nORM. This document covers local development and doc
 Requires Python **3.12+**.
 
 ```sh
-git clone https://github.com/devfros/norm.git
+git clone https://github.com/devfros/nORM.git
 cd norm
 poetry install --with dev
 # or: pip install -e .
@@ -65,4 +65,4 @@ Edit pages under `docs/`; navigation is configured in `docs/.vitepress/config.ts
 
 ## Reporting issues
 
-Use [GitHub Issues](https://github.com/devfros/norm/issues) and include your `norm.yaml` (redact secrets), SQL snippets, and the `norm` command output when relevant.
+Use [GitHub Issues](https://github.com/devfros/nORM/issues) and include your `norm.yaml` (redact secrets), SQL snippets, and the `norm` command output when relevant.

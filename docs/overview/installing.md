@@ -42,4 +42,4 @@ Generated Python code imports the driver for the configured `sql.engine`. Instal
 
 - [Getting started with Python](../tutorials/python)
 - [Configuration](../reference/configuration/)
-- [Contributing](https://github.com/devfros/norm/blob/main/CONTRIBUTING.md) (local dev and docs preview)
+- [Contributing](https://github.com/devfros/nORM/blob/main/CONTRIBUTING.md) (local dev and docs preview)

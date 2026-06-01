@@ -15,7 +15,7 @@ hero:
       link: ./tutorials
     - theme: alt
       text: GitHub
-      link: https://github.com/devfros/norm
+      link: https://github.com/devfros/nORM
 
 features:
   - icon: 🧠

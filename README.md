@@ -10,7 +10,7 @@ One tool for your database schema, queries, and typed data-layer code.
 [![Python](https://img.shields.io/pypi/pyversions/norm-cli)](https://pypi.org/project/norm-cli/)
 [![License](https://img.shields.io/github/license/devfros/nORM)](LICENSE)
 
-[Documentation](https://devfros.github.io/nORM) · [Python tutorial](https://devfros.github.io/nORM/tutorials/python) · [GitHub](https://github.com/devfros/norm)
+[Documentation](https://devfros.github.io/nORM) · [Python tutorial](https://devfros.github.io/nORM/tutorials/python) · [GitHub](https://github.com/devfros/nORM)
 
 </div>
 
