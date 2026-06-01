@@ -37,7 +37,7 @@ Commands:
 
 def _package_version() -> str:
     try:
-        return version("nORM")
+        return version("norm-cli")
     except PackageNotFoundError:
         return "0.0.0"
 
