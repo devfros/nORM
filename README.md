@@ -2,7 +2,7 @@
 
 # nORM
 
-**Write the SQL you want. Generate the typed API you need.**
+**Replace ORM complexity with SQL-first codegen.**
 
 One tool for your database schema, queries, and typed data-layer code.
 
