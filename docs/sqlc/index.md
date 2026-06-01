@@ -6,9 +6,9 @@ If you already like SQL-first code generation, nORM should feel familiar: you ke
 
 ## Why this page exists
 
-`sqlc` is excellent for many teams. nORM is not trying to replace it outright.
+`sqlc` is excellent. nORM is not trying to replace it outright.
 
-nORM focuses on cases where teams still reach for ORM-style workflows because they need more runtime composition.
+nORM focuses on cases where you still reach for ORM-style workflows because they need more runtime composition.
 
 ## Where nORM adds extra ergonomics
 

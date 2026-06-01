@@ -1,6 +1,6 @@
 # What is nORM?
 
-nORM (no ORM) is a SQL-first code generator for teams that want typed data access without moving query design into an ORM.
+nORM (no ORM) is a SQL-first code generator for developers that want typed data access without moving query design into an ORM.
 
 You write schema and repository SQL. nORM generates typed models and repository methods from those files.
 
@@ -36,7 +36,6 @@ CREATE TABLE books (
 );
 ```
 
-
 ### 2. Write repository SQL
 
 ```sql [author_repo.sql]
@@ -46,7 +45,6 @@ CREATE TABLE books (
 SELECT * FROM authors
 WHERE rating = :rating;
 ```
-
 
 ### 3. Generate code
 
@@ -148,7 +146,6 @@ async def main():
 ```
 
 :::
-
 
 ## What nORM adds
 
