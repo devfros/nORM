@@ -1,6 +1,6 @@
 [project]
 name = "norm-cli"
-version = "0.1.0"
+version = "0.1.1"
 description = "Replace ORM complexity with SQL-first codegen"
 readme = "README.md"
 license = "MIT"
