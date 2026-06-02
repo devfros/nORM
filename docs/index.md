@@ -4,6 +4,9 @@ layout: home
 
 hero:
   name: nORM
+  image:
+    src: /logo-240x240.svg
+    alt: nORM
   text: SQL-first code generation without ORM complexity
   tagline: Write the SQL you want. Generate the typed API you need.
   actions:

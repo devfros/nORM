@@ -5,8 +5,10 @@ import {
   groupIconVitePlugin,
 } from 'vitepress-plugin-group-icons'
 
+const base = '/nORM/'
+
 export default defineConfig({
-  base: "/nORM/",
+  base,
   title: "nORM",
   description: "nORM documentation and SQL feature references.",
 
@@ -37,15 +39,17 @@ export default defineConfig({
     ]
   },
 
-  // head: [
-  //   ['link', { rel: 'icon', type: 'image/svg+xml', href: '/vitepress-logo-mini.svg' }],
-  //   ['link', { rel: 'icon', type: 'image/png', href: '/vitepress-logo-mini.png' }],
-  //   ['meta', { name: 'theme-color', content: '#5f67ee' }],
-  //   ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }]
-  // ],
+  head: [
+    ['link', { rel: 'icon', href: `${base}favicon.ico`, sizes: 'any' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${base}favicon-32x32.png` }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: `${base}favicon-16x16.png` }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: `${base}apple-touch-icon.png` }],
+    ['link', { rel: 'manifest', href: `${base}site.webmanifest` }],
+    ['meta', { name: 'theme-color', content: '#CE9354' }],
+  ],
 
   themeConfig: {
-    // logo: { src: '/vitepress-logo-mini.svg', width: 24, height: 24 },
+    logo: { src: '/logo-24x24.svg', width: 24, height: 24 },
     nav: nav(),
 
     socialLinks: [

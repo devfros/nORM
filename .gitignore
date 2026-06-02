@@ -3,6 +3,7 @@
 .idea
 info/**
 dist/
+.obsidian/
 run.py
 logs/**
 .env

@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/public/logo-240x240.svg" alt="nORM" width="120" height="120">
+
 # nORM
 
 **Replace ORM complexity with SQL-first codegen.**
