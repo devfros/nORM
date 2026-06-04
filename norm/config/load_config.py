@@ -18,7 +18,7 @@ def load_norm_config(path: str | Path) -> NormConfig:
             message="Invalid norm.yaml configuration.",
             hint="Fix YAML syntax errors and run the command again.",
             context={"details": str(err), "path": str(path)},
-        ) from None
+        ) from err
 
     if data is None:
         data = {}
@@ -35,6 +35,6 @@ def load_norm_config(path: str | Path) -> NormConfig:
             code=NormErrorCode.INVALID_CONFIG,
             message="Invalid norm.yaml configuration.",
             context={"details": detail, "path": str(path)},
-        ) from None
+        ) from err
 
     return config

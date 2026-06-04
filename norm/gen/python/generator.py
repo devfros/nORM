@@ -5,7 +5,7 @@ from jinja2 import Environment, PackageLoader
 from jinja2.bccache import FileSystemBytecodeCache
 from sqlglot import Dialects
 
-from norm.consts import *
+from norm.consts import MODULE_COMMENT
 from norm.gen.base_generator import BaseGenerator
 from norm.gen.python.consts import UNSET_SENTINEL, VarNames
 from norm.gen.python.dialects import PythonDialectProfile, get_python_dialect_profile

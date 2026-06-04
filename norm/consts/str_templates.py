@@ -1,1 +1,0 @@
-TEMP_PLACEHOLDER_PATTERN = "/*{}*/"

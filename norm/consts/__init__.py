@@ -1,5 +1,11 @@
-from .defaults import *
-from .keys import *
-from .prefixes import *
-from .str_templates import *
-from .supported import *
+from .core import (
+    CONFIG_FILE,
+    DEFAULT_CONFIG,
+    MODULE_COMMENT,
+    OPTIONAL_PREFIX,
+    SUPPORTED_POSTGRES_CONNECTION_SCHEMES,
+    SUPPORTED_PYTHON_MODELS,
+    SUPPORTED_SQL_DIALECTS,
+    TEMP_PLACEHOLDER_PATTERN,
+)
+from .keys import MetaKeys
