@@ -9,6 +9,21 @@ and this project follows [Semantic Versioning](https://semver.org/).
 
 --
 
+## [0.2.0] - 2026-06-05
+
+### Changed
+
+- Bumped **sqlglot** to 30.9.0.
+- Schema SQL parser now handles Postgres-style `COMMENT ON` via sqlglot instead of a regex pre-processor.
+
+### Fixed
+
+- Schema-qualified `COMMENT ON TYPE`, `COMMENT ON VIEW`, and related targets parse reliably again (sqlglot [#7683](https://github.com/tobymao/sqlglot/issues/7683)).
+
+## [0.1.1] - 2026-06-02
+
+Small changes and fixes
+
 ## [0.1.0] - 2026-06-01
 
 First public release. nORM is a SQL-first code generator for typed data access without ORM complexity - inspired by [sqlc](https://github.com/sqlc-dev/sqlc), with extra support for runtime query composition.
@@ -63,5 +78,7 @@ First public release. nORM is a SQL-first code generator for typed data access w
 - Go, Rust, and TypeScript code generators.
 - `norm migrations` command group.
 
-[Unreleased]: https://github.com/devfros/nORM/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/devfros/nORM/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/devfros/nORM/compare/v0.1.1...v0.2.0
+[0.1.1]: https://github.com/devfros/nORM/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/devfros/nORM/releases/tag/v0.1.0

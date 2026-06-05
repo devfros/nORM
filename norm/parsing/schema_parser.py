@@ -1,4 +1,3 @@
-import re
 from pathlib import Path
 
 from sqlglot import Dialects, exp, parse
@@ -7,19 +6,9 @@ from sqlglot.errors import ParseError
 from norm.errors import NormError, NormErrorCode
 from norm.schemas.parsing import DBSchema, ModelDefinition, function_signature_key
 
-from .ddl import DdlModelBuilder
+from .ddl import DdlModelBuilder, _literal_text
 from .type_refs import resolve_schema_field_types
 from .view_fields import populate_view_fields
-
-# TODO: Change after https://github.com/tobymao/sqlglot/issues/7683
-_COMMENT_ON_PATTERN = re.compile(
-    r"COMMENT\s+ON\s+"
-    r"(?P<kind>SCHEMA|TYPE|TABLE|COLUMN|VIEW)\s+"
-    r"(?P<target>.+?)\s+IS\s+"
-    r"'(?P<comment>(?:''|[^'])*)'\s*;?",
-    re.IGNORECASE | re.DOTALL,
-)
-_QUALIFIED_PARTS = 2
 
 
 class SchemaSqlParser:
@@ -38,17 +27,22 @@ class SchemaSqlParser:
         if content is None or len(content) == 0:
             return None
 
-        db_schema: DBSchema = DBSchema(dialect=self._dialect)
-        comment_defs, ddl_content = _extract_comment_defs(content)
-        create_defs = self.parse_create_defs(ddl_content)
+        parsed = self._parse_statements(content)
+        if parsed is None:
+            return None
+
+        create_defs = [item for item in parsed if isinstance(item, exp.Create)]
+        comment_defs = [item for item in parsed if isinstance(item, exp.Comment)]
         if not create_defs and not comment_defs:
             return None
+
+        db_schema: DBSchema = DBSchema(dialect=self._dialect)
 
         visited_tables: set[str] = set()
         visited_views: set[str] = set()
         visited_functions: set[str] = set()
         pending_views: list[tuple[ModelDefinition, exp.Expr | None, list[str]]] = []
-        for create_def in create_defs or []:
+        for create_def in create_defs:
             kind = create_def.kind.lower() if create_def.kind else None
             if kind == "schema":
                 schema = create_def.find(exp.Table)
@@ -159,7 +153,7 @@ class SchemaSqlParser:
 
         return db_schema
 
-    def parse_create_defs(self, sql_string: str) -> list[exp.Create] | None:
+    def _parse_statements(self, sql_string: str) -> list[exp.Expr] | None:
         try:
             parsed = parse(sql=sql_string, dialect=self._dialect)
         except ParseError as err:
@@ -168,14 +162,17 @@ class SchemaSqlParser:
                 message="Failed to parse schema SQL.",
                 context={"details": str(err)},
             ) from err
+        return parsed
+
+    def parse_create_defs(self, sql_string: str) -> list[exp.Create] | None:
+        parsed = self._parse_statements(sql_string)
         if parsed is None:
             return None
 
         return [item for item in parsed if isinstance(item, exp.Create)]
 
     def parse_table_defs(self, sql_string: str) -> list[exp.Create] | None:
-        _, ddl_content = _extract_comment_defs(sql_string)
-        create_defs = self.parse_create_defs(ddl_content)
+        create_defs = self.parse_create_defs(sql_string)
         if create_defs is None:
             return None
 
@@ -186,118 +183,62 @@ class SchemaSqlParser:
         ]
         return table_defs
 
-    def _apply_comment(self, db_schema: DBSchema, comment_def: "_CommentDef") -> None:
-        parts = _identifier_parts(comment_def.target)
-        if not parts:
+    def _apply_comment(self, db_schema: DBSchema, comment: exp.Comment) -> None:
+        raw_kind = comment.args.get("kind")
+        kind = raw_kind.upper() if isinstance(raw_kind, str) else None
+        text = _literal_text(comment.expression)
+        if not kind or text is None:
             return
 
-        if comment_def.kind == "SCHEMA":
-            db_schema.declare_catalog(parts[-1]).comment = comment_def.comment
+        target = comment.this
+
+        if kind == "SCHEMA":
+            if isinstance(target, exp.Table) and target.name:
+                db_schema.declare_catalog(target.name).comment = text
             return
 
-        if comment_def.kind == "TYPE":
-            catalog_name, name = _catalog_and_name(parts, db_schema.default_catalog)
-            enum = db_schema.get_enum(name, catalog_name)
-            if enum:
-                enum.comment = comment_def.comment
+        if kind == "TYPE":
+            if isinstance(target, exp.Table) and target.name:
+                catalog_name = target.db or db_schema.default_catalog
+                enum = db_schema.get_enum(target.name, catalog_name)
+                if enum:
+                    enum.comment = text
+                    return
+
+                composite_type = db_schema.get_composite_type(
+                    target.name,
+                    catalog_name,
+                )
+                if composite_type:
+                    composite_type.comment = text
+            return
+
+        if kind == "VIEW":
+            if isinstance(target, exp.Table) and target.name:
+                catalog_name = target.db or db_schema.default_catalog
+                view = db_schema.get_view(target.name, catalog_name)
+                if view:
+                    view.comment = text
+            return
+
+        if kind == "TABLE":
+            if isinstance(target, exp.Table) and target.name:
+                catalog_name = target.db or db_schema.default_catalog
+                table = db_schema.get_table(target.name, catalog_name)
+                if table:
+                    table.comment = text
+            return
+
+        if kind == "COLUMN" and isinstance(target, exp.Column):
+            column_name = target.name
+            table_name = target.table
+            if not column_name or not table_name:
                 return
 
-            composite_type = db_schema.get_composite_type(name, catalog_name)
-            if composite_type:
-                composite_type.comment = comment_def.comment
-            return
-
-        if comment_def.kind == "VIEW":
-            catalog_name, name = _catalog_and_name(parts, db_schema.default_catalog)
-            view = db_schema.get_view(name, catalog_name)
-            if view:
-                view.comment = comment_def.comment
-            return
-
-        if comment_def.kind == "TABLE":
-            catalog_name, name = _catalog_and_name(parts, db_schema.default_catalog)
-            table = db_schema.get_table(name, catalog_name)
-            if table:
-                table.comment = comment_def.comment
-            return
-
-        if comment_def.kind == "COLUMN" and len(parts) >= _QUALIFIED_PARTS:
-            column_name = parts[-1]
-            table_parts = parts[:-1]
-            catalog_name, table_name = _catalog_and_name(
-                table_parts,
-                db_schema.default_catalog,
-            )
+            catalog_name = target.db or db_schema.default_catalog
             table = db_schema.get_table(table_name, catalog_name)
             if table and column_name in table.fields:
-                table.fields[column_name].comment = comment_def.comment
-
-
-class _CommentDef:
-    def __init__(self, kind: str, target: str, comment: str) -> None:
-        self.kind = kind
-        self.target = target
-        self.comment = comment
-
-
-def _extract_comment_defs(sql_string: str) -> tuple[list[_CommentDef], str]:
-    comments: list[_CommentDef] = []
-    spans: list[tuple[int, int]] = []
-
-    for match in _COMMENT_ON_PATTERN.finditer(sql_string):
-        comments.append(
-            _CommentDef(
-                kind=match.group("kind").upper(),
-                target=match.group("target").strip(),
-                comment=match.group("comment").replace("''", "'"),
-            )
-        )
-        spans.append(match.span())
-
-    if not spans:
-        return comments, sql_string
-
-    chunks: list[str] = []
-    start = 0
-    for span_start, span_end in spans:
-        chunks.append(sql_string[start:span_start])
-        chunks.append(";")
-        start = span_end
-    chunks.append(sql_string[start:])
-    return comments, "".join(chunks)
-
-
-def _identifier_parts(target: str) -> list[str]:
-    parts: list[str] = []
-    current: list[str] = []
-    quoted = False
-    index = 0
-
-    while index < len(target):
-        char = target[index]
-        if char == '"':
-            if quoted and index + 1 < len(target) and target[index + 1] == '"':
-                current.append('"')
-                index += 2
-                continue
-            quoted = not quoted
-        elif char == "." and not quoted:
-            parts.append("".join(current).strip())
-            current = []
-        else:
-            current.append(char)
-        index += 1
-
-    if current:
-        parts.append("".join(current).strip())
-
-    return [part for part in parts if part]
-
-
-def _catalog_and_name(parts: list[str], default_catalog: str) -> tuple[str, str]:
-    if len(parts) >= _QUALIFIED_PARTS:
-        return parts[-2], parts[-1]
-    return default_catalog, parts[-1]
+                table.fields[column_name].comment = text
 
 
 def _table_from_create_def(
