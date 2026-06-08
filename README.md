@@ -14,9 +14,9 @@ One tool for your database schema, queries, and typed data-layer code.
 
 [Documentation](https://devfros.github.io/nORM) · [Python tutorial](https://devfros.github.io/nORM/tutorials/python) · [GitHub](https://github.com/devfros/nORM)
 
-<video src="docs/public/showcase.mp4" controls width="720" style="max-width: 100%;">
-  <a href="docs/public/showcase.mp4">Watch the nORM showcase</a>
-</video>
+[![nORM showcase](docs/public/showcase-poster.png)](https://devfros.github.io/nORM/showcase.mp4)
+
+*Click to watch the full demo*
 
 </div>
 
