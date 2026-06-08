@@ -158,6 +158,7 @@ function nav(): DefaultTheme.NavItem[] {
     { text: 'Quickstart', link: '/tutorials/python' },
     { text: 'Guides', link: '/guides/select' },
     { text: 'Reference', link: '/reference/cli' },
+    { text: 'Playground', link: 'https://norm-play.vercel.app/' },
     {
       text: 'More',
       items: [
