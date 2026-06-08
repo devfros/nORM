@@ -14,6 +14,10 @@ One tool for your database schema, queries, and typed data-layer code.
 
 [Documentation](https://devfros.github.io/nORM) · [Python tutorial](https://devfros.github.io/nORM/tutorials/python) · [GitHub](https://github.com/devfros/nORM)
 
+<video src="docs/public/showcase.mp4" controls width="720" style="max-width: 100%;">
+  <a href="docs/public/showcase.mp4">Watch the nORM showcase</a>
+</video>
+
 </div>
 
 nORM (**no ORM**) is a SQL-first toolkit for managing your database and the code that talks to it. You define schema and repository SQL in one place; nORM generates typed data access code for your stack. Python is available today. Rust, Go, and TypeScript generators are in progress, and a migrations workflow is planned, so the same `norm` CLI can eventually cover schema changes and repositories across languages.

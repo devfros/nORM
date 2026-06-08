@@ -34,3 +34,9 @@ features:
     title: Multi-Dialect Python
     details: Generate Python code for Postgres, SQLite, MySQL, ClickHouse, and DuckDB. Rust, Go, and TypeScript generators are in progress.
 ---
+
+<div style="display: flex; justify-content: center; margin: 2rem 0;">
+  <video src="/showcase.mp4" controls width="720" style="max-width: 100%; border-radius: 8px;">
+    Your browser does not support the video tag.
+  </video>
+</div>
