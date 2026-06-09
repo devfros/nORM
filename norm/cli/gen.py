@@ -31,7 +31,6 @@ if TYPE_CHECKING:
     from pathlib import Path
 
     from norm.parsing.repo_parser import RepoSqlParser
-    from norm.processing.processor import QueryProcessor
     from norm.schemas import GenOutputFiles
     from norm.schemas.config import TargetConfig
     from norm.schemas.repo import Repo
@@ -140,7 +139,8 @@ def generate_target(
                         "target": target.name,
                         "repository": repo.file_path.name,
                         "query": repo_query.name,
-                        "line": repo_query.line,
+                        "line": repo_query.sql_start_line,
+                        "sql_start_line": repo_query.sql_start_line,
                     },
                 )
             try:
@@ -151,7 +151,8 @@ def generate_target(
                     target=target.name,
                     repository=repo.file_path.name,
                     query=repo_query.name,
-                    line=repo_query.line,
+                    line=repo_query.sql_start_line,
+                    sql_start_line=repo_query.sql_start_line,
                 ) from err
             repo.processed_queries.append(processed_query.model_copy(deep=True))
         processed_repos.append(repo)

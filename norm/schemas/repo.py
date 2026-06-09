@@ -44,6 +44,7 @@ class RepoQuery(CoreSchema):
     comment: str | None
     command: QueryCommandEnum = QueryCommandEnum.ONE
     line: int | None = None
+    sql_start_line: int | None = None
 
 
 @dataclass

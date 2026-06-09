@@ -85,10 +85,18 @@ def _render_config_tree(console: Console, details: object) -> None:
     console.print(tree)
 
 
-def _render_sql_snippet(console: Console, query: object) -> None:
+def _render_sql_snippet(
+    console: Console,
+    query: object,
+    *,
+    start_line: int | None = None,
+) -> None:
     if not isinstance(query, str):
         return
-    console.print(Syntax(query, "sql", theme="monokai", line_numbers=True))
+    kwargs: dict[str, object] = {"line_numbers": True}
+    if start_line is not None:
+        kwargs["start_line"] = start_line
+    console.print(Syntax(query, "sql", theme="monokai", **kwargs))  # pyright: ignore[reportArgumentType]
 
 
 def render_error_human(console: Console, err: NormError) -> None:
@@ -105,7 +113,12 @@ def render_error_human(console: Console, err: NormError) -> None:
     elif err.code == NormErrorCode.INVALID_CONFIG and "details" in context:
         _render_config_tree(console, context["details"])
     elif "query" in context and isinstance(context["query"], str):
-        _render_sql_snippet(console, context["query"])
+        sql_start_line = context.get("sql_start_line")
+        start_line = sql_start_line if isinstance(sql_start_line, int) else None
+        if start_line is None:
+            line = context.get("line")
+            start_line = line if isinstance(line, int) else None
+        _render_sql_snippet(console, context["query"], start_line=start_line)
     else:
         for key, value in context.items():
             if key in {"issues", "details", "query"}:

@@ -5,7 +5,8 @@ from sqlglot import Dialects, parse
 from sqlglot.errors import ParseError
 from sqlglot.expressions import Delete, Insert, Select, Update
 
-from norm.errors import NormError, NormErrorCode
+from norm.errors import NormError, NormErrorCode, to_file_line
+from norm.parsing.query_preamble import file_line_at_offset, split_query_preamble
 from norm.schemas.repo import QueryCommandEnum, Repo, RepoQuery
 
 
@@ -41,9 +42,9 @@ class RepoSqlParser:
             annotation = match.group(1)
             start = match.end()
             end = matches[i + 1].start() if i + 1 < len(matches) else len(content)
-            query_text = content[start:end].strip()
+            raw_query_slice = content[start:end]
             line = content.count("\n", 0, match.start()) + 1
-            queries.append((annotation, query_text, line))
+            queries.append((annotation, raw_query_slice, line))
 
         header = content[: matches[0].start()] if matches else content
         repo_match = re.search(r"^-- (repo_name:.*)$", header, re.MULTILINE)
@@ -59,7 +60,7 @@ class RepoSqlParser:
         )
 
         visited: set[str] = set()
-        for query_annotation, query_content, query_line in queries:
+        for query_annotation, raw_query_slice, query_line in queries:
             name, command = self._query_name_and_command_from_annotation(
                 query_annotation
             )
@@ -76,9 +77,14 @@ class RepoSqlParser:
                 )
             visited.add(name)
 
+            preamble = split_query_preamble(raw_query_slice, self._dialect)
+            sql_start_line = file_line_at_offset(
+                raw_query_slice,
+                preamble.sql_body_offset,
+                query_line,
+            )
             try:
-                query_sql, comment = _split_leading_query_comment(query_content)
-                parsed = parse(query_sql, dialect=self._dialect)
+                parsed = parse(preamble.sql_body, dialect=self._dialect)
 
                 if parsed is None or len(parsed) == 0:
                     continue
@@ -103,11 +109,22 @@ class RepoSqlParser:
                     name=name,
                     command=command,
                     sql=query,  # pyright: ignore[reportArgumentType]
-                    comment=comment,
+                    comment=preamble.comment,
                     line=query_line,
+                    sql_start_line=sql_start_line,
                 )
                 repo.queries.append(repo_query)
             except ParseError as err:
+                query_relative_line = err.errors[0]["line"] if err.errors else 1
+                file_line = to_file_line(sql_start_line, query_relative_line)
+                details = str(err)
+                if file_line is not None:
+                    details = re.sub(
+                        rf"\bLine {query_relative_line}\b",
+                        f"Line {file_line}",
+                        details,
+                        count=1,
+                    )
                 raise NormError(
                     code=NormErrorCode.SQL_PARSE_FAILED,
                     message=f"Failed to parse repository SQL file '{resolved_path.name}'.",
@@ -115,7 +132,10 @@ class RepoSqlParser:
                     context={
                         "repository": resolved_path.name,
                         "file": str(resolved_path),
-                        "details": str(err),
+                        "query": name,
+                        "line": file_line,
+                        "sql_start_line": sql_start_line,
+                        "details": details,
                     },
                 ) from err
 
@@ -181,24 +201,3 @@ class RepoSqlParser:
             ) from err
 
         return name, command
-
-
-def _split_leading_query_comment(query_text: str) -> tuple[str, str | None]:
-    comment_lines: list[str] = []
-    sql_lines: list[str] = []
-    reading_comment = True
-
-    for line in query_text.splitlines():
-        stripped = line.strip()
-        if reading_comment and stripped.startswith("--"):
-            comment_lines.append(stripped[2:].strip())
-            continue
-
-        if reading_comment and not stripped:
-            continue
-
-        reading_comment = False
-        sql_lines.append(line)
-
-    comment = "\n".join(comment_lines).strip() or None
-    return "\n".join(sql_lines).strip(), comment

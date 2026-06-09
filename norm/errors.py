@@ -73,6 +73,17 @@ def merge_context(
     return merged
 
 
+def to_file_line(
+    sql_start_line: int | None,
+    query_line: int | None = None,
+) -> int | None:
+    if sql_start_line is None:
+        return None
+    if query_line is None:
+        return sql_start_line
+    return sql_start_line + query_line - 1
+
+
 def with_context(err: NormError, **extra: object) -> NormError:
     return NormError(
         code=err.code,
